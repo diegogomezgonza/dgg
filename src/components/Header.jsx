@@ -4,11 +4,10 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-content">
-        <h1>Your Name</h1>
-        <p className="tagline">Web Developer & Creative Thinker</p>
+        <h1 className="header-name">Diego Gómez</h1>
+        <p className="tagline">Full-stack developer</p>
         <p className="introduction">
-          Welcome to my creative space. I'm passionate about crafting unique digital experiences
-          and bringing ideas to life. Let's build something amazing together!
+          He creado esta página para mostrar mi portfolio a la vez que trabajo con react.
         </p>
       </div>
     </header>
