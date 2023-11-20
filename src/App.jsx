@@ -1,3 +1,5 @@
+import { useState } from "react";
+import "./css/App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
@@ -17,6 +19,8 @@ import "./components/css/Draws.css";
 import "./components/css/Contact.css";
 
 function App() {
+  const [count, setCount] = useState(0);
+
   return (
     <Router>
       <div className="App">
