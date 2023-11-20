@@ -6,7 +6,15 @@ import Draws from "./components/Draws";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import "./App.css";
+import "./css/App.css";
+
+// CSS componentes
+import "./components/css/Footer.css";
+import "./components/css/Projects.css";
+import "./components/css/Navbar.css";
+import "./components/css/Header.css";
+import "./components/css/Draws.css";
+import "./components/css/Contact.css";
 
 function App() {
   return (

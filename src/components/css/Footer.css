@@ -1,0 +1,10 @@
+/* Footer */
+/* Fondo footer */
+.footer-bg {
+  background-color: #181818;
+}
+
+/* Mantener footer abajo */
+.footer {
+  margin-top: auto;
+}
