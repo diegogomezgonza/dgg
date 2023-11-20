@@ -8,9 +8,9 @@ const Projects = () => {
     dots: true,
     infinite: true,
     // Opción puesta en falso para que sea horizontal
-    vertical: false, 
+    vertical: false,
     // Esta opción tiene que estar desactivada
-    verticalSwiping: false, 
+    verticalSwiping: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
