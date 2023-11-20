@@ -62,6 +62,13 @@ const Projects = () => {
           />
           <p className="draws-legend">Casca golden age</p>
         </div>
+        <div>
+          <img
+            alt="Project 7"
+            src="https://cdnb.artstation.com/p/assets/images/images/069/545/401/large/dgg-dibujo-sukuna.jpg?1700417738"
+          />
+          <p className="draws-legend">Sukuna</p>
+        </div>
       </Slider>
     </section>
   );
