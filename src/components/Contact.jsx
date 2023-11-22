@@ -3,8 +3,7 @@ import React from 'react';
 const Contact = () => {
   return (
     <section>
-      <h2>Contact</h2>
-      {/* Add your contact information and form here */}
+      <h2 className="text-white">Contacto</h2>
     </section>
   );
 };
