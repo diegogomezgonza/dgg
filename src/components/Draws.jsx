@@ -17,8 +17,8 @@ const Draws = () => {
   };
 
   return (
-    <section className="draws">
-      <h2 className="draws-title text-white">Destacados</h2>
+    <section>
+      <h2 className="fs-2 text-white pb-2 mt-5">Destacados</h2>
       <Slider {...settings}>
         <div>
           <img

@@ -1,12 +1,4 @@
 /* Sección dibujos */
-.draws {
-  margin: 20px;
-}
-
-.draws-title {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
 
 .project-card {
   background-color: #fff;
@@ -16,7 +8,21 @@
   margin-bottom: 20px;
 }
 
+/* Scroll de imágenes */
+.slick-slider {
+  max-width: 600px; /* Adjust the max-width as needed */
+  margin: 0 auto;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: Add rounded corners to the images */
+}
+
 /* Color dots */
 .slick-dots li button:before {
   color: white;
 }
+
+
