@@ -1,54 +1,54 @@
 /* Navbar */
 .navbar {
-    background-color: #181818;;
-    display: flex;
-    padding: 100px;
-  }
-  
-  .navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar li {
-    display: inline-block;
-    margin-right: 15px;
-    padding: 20px;
-  }
-  
-  .navbar a {
-    text-decoration: none;
-    color: #ffffff; /* Customize the text color as needed */
-    font-family: "Roboto Mono", monospace;
-  }
-  
-  .navbar-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .navbar-item {
-    margin: 0 20px;
-  }
-  
-  /* Tamaño, color y hover para links del navbar */
-  a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    font-size: 18px;
-  }
-  
-  a:hover {
-    color: #444444;
-  }
+  background-color: #181818;
+  display: flex;
+  padding: 100px;
+}
 
-  .fixed-middle {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff; /* Customize the text color as needed */
+  font-family: "Roboto Mono", monospace;
+}
+
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-item {
+  margin: 0 20px;
+}
+
+/* Tamaño, color y hover para links del navbar */
+a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+a:hover {
+  color: #444444;
+}
+
+.fixed-middle {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}

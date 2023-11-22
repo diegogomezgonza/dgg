@@ -7,11 +7,9 @@ import Navbar from "./components/Navbar";
 import Draws from "./components/Draws";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import "./css/App.css";
 
 // CSS componentes
-import "./components/css/Footer.css";
 import "./components/css/Projects.css";
 import "./components/css/Navbar.css";
 import "./components/css/Header.css";
@@ -32,7 +30,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
-      <Footer />
     </Router>
   );
 }
