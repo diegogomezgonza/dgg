@@ -65,9 +65,9 @@ const Draws = () => {
         <div>
           <img
             alt="Project 7"
-            src="https://cdnb.artstation.com/p/assets/images/images/069/545/401/large/dgg-dibujo-sukuna.jpg?1700417738"
+            src="https://cdnb.artstation.com/p/assets/images/images/069/609/085/large/dgg-dibujo-toji.jpg?1700563460"
           />
-          <p className="fs-5 text-white mt-4">Sukuna</p>
+          <p className="fs-5 text-white mt-4">Toji Fushiguro</p>
         </div>
       </Slider>
     </section>
