@@ -1,0 +1,22 @@
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height to fill the viewport */
+  margin: 0; /* Remove default margin to ensure full width */
+}
+
+.contact-site {
+  text-align: center;
+  cursor: pointer;
+  margin: 50px; /* Add margin between sites */
+}
+
+.additional-text {
+  display: none;
+  color: gray;
+}
+
+.contact-site:hover .additional-text {
+  display: block;
+}
