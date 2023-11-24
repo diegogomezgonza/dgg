@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Draws from "./components/Draws";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import HeaderWithNavbar from "./components/HeaderWithNavbar";
 import "./css/App.css";
 
 // CSS componentes
@@ -22,8 +23,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-      <Header />
-        <Navbar />
+      <HeaderWithNavbar />
         <Routes>
           <Route path="/projects" element={<Projects />} />
           <Route path="/draws" element={<Draws />} />

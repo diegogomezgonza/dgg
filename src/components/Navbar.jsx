@@ -1,10 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar fixed-middle fixed-start">
-      <ul className="navbar-list flex-column">
+    <nav className="navbar fixed-bottom fixed-middle text-center">
+      <ul className="navbar-list">
         <li className="navbar-item">
           <Link to="/">Home</Link>
         </li>
@@ -23,3 +22,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

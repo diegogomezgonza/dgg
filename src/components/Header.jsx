@@ -1,18 +1,20 @@
 import React from "react";
+import "./css/Header.css"; // Import your CSS file
+
 const Header = () => {
   return (
     <header className="header position-fixed">
-      <div className="header-content position-fixed top-0 start-0 p-5">
+      <div className="header-content position-fixed bottom-0 start-0 p-5">
         <h1 className="text-white">Diego Gómez</h1>
         <div className="container">
-          <div class="row pt-3">
+          <div className="row pt-3">
             <div className="col d-flex justify-content-center align-items-center">
               <a
                 href="https://www.instagram.com/dgg.arts/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="campanies__logo-box shadow-sm bg-transparent border border-0 rounded-pill ">
+                <div className="campanies__logo-box shadow-sm bg-transparent border border-0 rounded-pill">
                   <i className="fab fa-instagram fa-2x"></i>
                 </div>
               </a>

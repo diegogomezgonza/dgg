@@ -2,7 +2,7 @@
 .navbar {
   background-color: #181818;
   display: flex;
-  padding: 100px;
+  margin-bottom: 110px;
 }
 
 .navbar ul {
@@ -14,7 +14,6 @@
 .navbar li {
   display: inline-block;
   margin-right: 15px;
-  padding: 20px;
 }
 
 .navbar a {
@@ -47,8 +46,14 @@ a:hover {
   color: #bb3636;
 }
 
+.fixed-bottom {
+  bottom: 0;
+}
+
 .fixed-middle {
   position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 50%;  /* Center horizontally */
+  transform: translateX(-50%);
 }
+
+
