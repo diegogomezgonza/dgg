@@ -1,16 +1,15 @@
 /* Header */
 .header {
   font-family: "Montserrat", sans-serif;
-  background-color: #181818;
 }
 
 .header-content {
   max-width: 800px;
   margin: 0 auto;
+  margin-left: 200px
 }
 
 .tagline {
-  font-size: 1.5em;
   margin-bottom: 20px;
   opacity: 0.8;
 }
@@ -19,5 +18,9 @@
   font-size: 1.2em;
   line-height: 1.6;
   opacity: 0.9;
+}
+
+.titleDGG{
+  font-size: 10.2em;
 }
 

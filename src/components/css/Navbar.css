@@ -2,7 +2,8 @@
 .navbar {
   background-color: #181818;
   display: flex;
-  margin-bottom: 110px;
+  flex-direction: column; /* Set to column to display vertically */
+  margin-left: 40px;
 }
 
 .navbar ul {
@@ -12,26 +13,15 @@
 }
 
 .navbar li {
-  display: inline-block;
-  margin-right: 15px;
+  margin-bottom: 10px; /* Adjust the spacing between items */
 }
 
 .navbar a {
   text-decoration: none;
-  color: #ffffff; /* Customize the text color as needed */
+  color: #ffffff;
   font-family: "Roboto Mono", monospace;
-}
-
-.navbar-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.navbar-item {
-  margin: 0 20px;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 /* Tamaño, color y hover para links del navbar */
@@ -50,10 +40,9 @@ a:hover {
   bottom: 0;
 }
 
-.fixed-middle {
+.fixed-left {
   position: fixed;
-  left: 50%;  /* Center horizontally */
-  transform: translateX(-50%);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
-
-

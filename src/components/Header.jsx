@@ -4,42 +4,42 @@ import "./css/Header.css"; // Import your CSS file
 const Header = () => {
   return (
     <header className="header position-fixed">
-      <div className="header-content position-fixed top-0 start-0 p-5">
-        <h1 className="text-white">Diego Gómez</h1>
+      <div className="header-content position-fixed top-50 start-0 translate-middle-y p-5">
+        <h1 className="titleDGG text-white">DGG</h1>
         <div className="container">
           <div className="row pt-3">
-            <div className="col d-flex justify-content-center align-items-center">
+            <div className="col text-center mb-3">
               <a
                 href="https://www.instagram.com/dgg.arts/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <div className="campanies__logo-box shadow-sm bg-transparent border border-0 rounded-pill">
-                  <i className="fab fa-instagram fa-2x"></i>
+                  <i className="fab fa-instagram fa-3x"></i>
                 </div>
               </a>
             </div>
-            <div className="col d-flex justify-content-center align-items-center">
+            <div className="col text-center mb-3">
               <a
-                href="https://www.linkedin.com/in/diego-g%C3%B3mez-gonz%C3%A1lez-372017199/"
+                href="https://www.artstation.com/dggdibujo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-transparent border border-0"
               >
                 <div className="campanies__logo-box shadow-sm bg-transparent border border-0 rounded-pill">
-                  <i className="fab fa-linkedin fa-2x"></i>
+                  <i className="fab fa-artstation fa-3x"></i>
                 </div>
               </a>
             </div>
-            <div className="col d-flex justify-content-center align-items-center">
+            <div className="col text-center mb-3">
               <a
-                href="https://github.com/diegogomezgonza"
+                href="https://www.pinterest.es/dggDraws/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-transparent border border-0"
               >
                 <div className="campanies__logo-box shadow-sm bg-transparent border border-0 rounded-pill">
-                  <i className="fab fa-github fa-2x"></i>
+                  <i className="fab fa-pinterest fa-3x"></i>
                 </div>
               </a>
             </div>
