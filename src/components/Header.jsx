@@ -4,7 +4,7 @@ import "./css/Header.css"; // Import your CSS file
 const Header = () => {
   return (
     <header className="header position-fixed">
-      <div className="header-content position-fixed bottom-0 start-0 p-5">
+      <div className="header-content position-fixed top-0 start-0 p-5">
         <h1 className="text-white">Diego Gómez</h1>
         <div className="container">
           <div className="row pt-3">

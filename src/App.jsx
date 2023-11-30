@@ -23,7 +23,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-      <HeaderWithNavbar />
+        <Header />
+        <Navbar/>
         <Routes>
           <Route path="/projects" element={<Projects />} />
           <Route path="/draws" element={<Draws />} />
