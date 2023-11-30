@@ -10,7 +10,7 @@ const Header = () => {
           <div className="row pt-3">
             <div className="col text-center mb-3">
               <a
-                href="https://www.instagram.com/dgg.arts/"
+                href="https://www.instagram.com/dgg.draws/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -33,7 +33,7 @@ const Header = () => {
             </div>
             <div className="col text-center mb-3">
               <a
-                href="https://www.pinterest.es/dggDraws/"
+                href="https://www.pinterest.es/dggDraws/_created"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-transparent border border-0"
