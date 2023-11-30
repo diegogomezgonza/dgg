@@ -10,8 +10,10 @@
 
 /* Scroll de imágenes */
 .slick-slider {
-  max-width: 600px; /* Adjust the max-width as needed */
-  margin: 0 auto;
+  max-width: 500px;
+  margin: 200px 0 0 auto;
+  position: relative;
+  margin-right: 500px;
 }
 
 .slick-slide img {
@@ -22,7 +24,18 @@
 
 /* Color dots */
 .slick-dots li button:before {
+  color: transparent;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-family: 'slick';
+  font-size: 30px;
+  line-height: 0;
+  opacity: 100;
   color: white;
+  margin: 30px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 

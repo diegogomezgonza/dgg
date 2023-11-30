@@ -1,19 +1,17 @@
-/* Navbar */
 .navbar {
-  background-color: #181818;
-  display: flex;
-  flex-direction: column; /* Set to column to display vertically */
-  margin-left: 40px;
+  top: 14%;
+  margin-right: 900px;
 }
 
 .navbar ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .navbar li {
-  margin-bottom: 10px; /* Adjust the spacing between items */
+  margin-right: 40px; /* Adjust the spacing between items */
 }
 
 .navbar a {
@@ -36,13 +34,6 @@ a:hover {
   color: #bb3636;
 }
 
-.fixed-bottom {
-  bottom: 0;
-}
-
 .fixed-left {
-  position: fixed;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }

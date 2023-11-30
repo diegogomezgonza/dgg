@@ -18,56 +18,27 @@ const Draws = () => {
 
   return (
     <section>
-      <h2 className="fs-2 text-white pb-2 mt-5">Destacados</h2>
       <Slider {...settings}>
         <div>
           <img
             alt="Project 1"
-            src="https://cdnb.artstation.com/p/assets/images/images/061/464/531/large/dgg-dibujo-guts.jpg?1680857895"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/eaaf251e-e378-4898-91a5-fb2a9f684a34/dgi1bnt-ce78fe7f-2b1b-4c7c-b7e8-8e4061fa267a.jpg/v1/fit/w_828,h_996,q_70,strp/harley_quinn_by_dggdrws_dgi1bnt-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTU0MSIsInBhdGgiOiJcL2ZcL2VhYWYyNTFlLWUzNzgtNDg5OC05MWE1LWZiMmE5ZjY4NGEzNFwvZGdpMWJudC1jZTc4ZmU3Zi0yYjFiLTRjN2MtYjdlOC04ZTQwNjFmYTI2N2EuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Ibset-80yPzxN8jc4s45GGgocFfBL4iVo7l5jQAM16k"
           />
-          <p className="fs-5 text-white mt-4">Guts Berserk armor</p>
+          <p className="fs-5 text-white mt-4">Harley Quinn</p>
         </div>
         <div>
           <img
             alt="Project 2"
-            src="https://cdna.artstation.com/p/assets/images/images/061/402/354/large/dgg-dibujo-misa.jpg?1680707029"
+            src="https://cdnb.artstation.com/p/assets/images/images/069/888/933/large/dgg-draws-catwoman.jpg?1701254762"
           />
-          <p className="fs-5 text-white mt-4">Misa</p>
+          <p className="fs-5 text-white mt-4">Catwoman</p>
         </div>
         <div>
           <img
             alt="Project 3"
             src="https://cdna.artstation.com/p/assets/images/images/061/402/398/large/dgg-dibujo-zoro.jpg?1680707082"
           />
-          <p className="fs-5 text-white mt-4">Zoro</p>
-        </div>
-        <div>
-          <img
-            alt="Project 4"
-            src="https://cdnb.artstation.com/p/assets/images/images/065/802/587/large/dgg-dibujo-vegeta.jpg?1691260492"
-          />
-          <p className="fs-5 text-white mt-4">Vegeta</p>
-        </div>
-        <div>
-          <img
-            alt="Project 5"
-            src="https://cdnb.artstation.com/p/assets/images/images/067/259/749/large/dgg-dibujo-guts-ga.jpg?1694957879"
-          />
-          <p className="fs-5 text-white mt-4">Guts golden age</p>
-        </div>
-        <div>
-          <img
-            alt="Project 6"
-            src="https://cdnb.artstation.com/p/assets/images/images/067/259/815/large/dgg-dibujo-casca-ga.jpg?1694958064"
-          />
-          <p className="fs-5 text-white mt-4">Casca golden age</p>
-        </div>
-        <div>
-          <img
-            alt="Project 7"
-            src="https://cdnb.artstation.com/p/assets/images/images/069/609/085/large/dgg-dibujo-toji.jpg?1700563460"
-          />
-          <p className="fs-5 text-white mt-4">Toji Fushiguro</p>
+          <p className="fs-5 text-white mt-4">Poison Ivy</p>
         </div>
       </Slider>
     </section>

@@ -16,3 +16,12 @@ body {
   /* Cuanto se ve en pantalla */
   min-height: 100vh;
 }
+
+/* Contenedor con borde y padding */
+.App-container {
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  flex-grow: 1;
+}
