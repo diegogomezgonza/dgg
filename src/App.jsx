@@ -15,11 +15,6 @@ import "./components/css/Draws.css";
 function App() {
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    // Redirección a home con useEffect
-    window.location.pathname !== "/home" && window.location.replace("/home");
-  }, []);
-
   return (
     <Router>
       <div className="App">
