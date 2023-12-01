@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./css/App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -14,6 +14,11 @@ import "./components/css/Draws.css";
 
 function App() {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    // Redirección a home
+    window.location.pathname !== "/home" && window.location.replace("/home");
+  }, []);
 
   return (
     <Router>
