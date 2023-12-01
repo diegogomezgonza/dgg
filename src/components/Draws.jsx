@@ -36,7 +36,7 @@ const Draws = () => {
         <div>
           <img
             alt="Project 3"
-            src="https://cdna.artstation.com/p/assets/images/images/061/402/398/large/dgg-dibujo-zoro.jpg?1680707082"
+            src="https://cdnb.artstation.com/p/assets/images/images/069/968/955/large/dgg-draws-poisonivy.jpg?1701426312"
           />
           <p className="fs-5 text-white mt-4">Poison Ivy</p>
         </div>
