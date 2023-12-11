@@ -40,6 +40,13 @@ const Draws = () => {
           />
           <p className="fs-5 text-white mt-4">Poison Ivy</p>
         </div>
+        <div>
+          <img
+            alt="Batman"
+            src="src\assets\pics\batman.jpg"
+          />
+          <p className="fs-5 text-white mt-4">Batman</p>
+        </div>
       </Slider>
     </section>
   );
