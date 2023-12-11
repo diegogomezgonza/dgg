@@ -22,28 +22,28 @@ const Draws = () => {
         <div>
           <img
             alt="Harley Quinn"
-            src="src\assets\pics\harley.jpg"
+            src="/pics/harley.jpg"
           />
           <p className="fs-5 text-white mt-4">Harley Quinn</p>
         </div>
         <div>
           <img
             alt="Catwoman"
-            src="src\assets\pics\catwoman.jpg"
+            src="/pics/catwoman.jpg"
           />
           <p className="fs-5 text-white mt-4">Catwoman</p>
         </div>
         <div>
           <img
             alt="Poison Ivy"
-            src="src\assets\pics\poisonivy.jpg"
+            src="/pics/poisonivy.jpg"
           />
           <p className="fs-5 text-white mt-4">Poison Ivy</p>
         </div>
         <div>
           <img
             alt="Batman"
-            src="src\assets\pics\batman.jpg"
+            src="/pics/batman.jpg"
           />
           <p className="fs-5 text-white mt-4">Batman</p>
         </div>
