@@ -27,7 +27,20 @@
   color: transparent;
 }
 
-.slick-prev:before, .slick-next:before {
+/* Flecha izquierda */
+.slick-prev:before {
+  font-family: 'slick';
+  font-size: 30px;
+  line-height: 0;
+  opacity: 100;
+  color: transparent;
+  margin: 30px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Flecha derecha */
+.slick-next:before {
   font-family: 'slick';
   font-size: 30px;
   line-height: 0;

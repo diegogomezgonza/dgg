@@ -19,7 +19,6 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <Header />
         <div className="App-container">
           <Routes>
             <Route path="/draws" element={<Draws />} />
