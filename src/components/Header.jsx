@@ -44,8 +44,17 @@ const Header = () => {
               </a>
             </div>
           </div>
-          <hr className="text-white"/>
-          <p className="text-white mt-4">made by <a href="https://github.com/diegogomezgonza">diegogomezgonza</a></p>
+          <hr className="text-white" />
+          <p className="text-white mt-4">
+            made by{" "}
+            <a
+              href="https://github.com/diegogomezgonza"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              diegogomezgonza
+            </a>
+          </p>
         </div>
       </div>
     </header>
