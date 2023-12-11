@@ -44,6 +44,8 @@ const Header = () => {
               </a>
             </div>
           </div>
+          <hr className="text-white"/>
+          <p className="text-white mt-4">made by <a href="https://github.com/diegogomezgonza">diegogomezgonza</a></p>
         </div>
       </div>
     </header>
