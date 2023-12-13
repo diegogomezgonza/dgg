@@ -47,6 +47,13 @@ const Draws = () => {
           />
           <p className="fs-5 text-white mt-4">Batman</p>
         </div>
+        <div>
+          <img
+            alt="Robin"
+            src="/pics/robin.jpg"
+          />
+          <p className="fs-5 text-white mt-4">Robin</p>
+        </div>
       </Slider>
     </section>
   );
