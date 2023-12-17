@@ -54,6 +54,7 @@ const Header = () => {
             >
               diegogomezgonza
             </a>
+            {" "} on GitHub.
           </p>
         </div>
       </div>

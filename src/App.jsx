@@ -1,30 +1,48 @@
-import { useState, useEffect } from "react";
-import "./css/App.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Draws from "./components/Draws";
+import MobileHeader from "./components/MobileHeader";
 import "./css/App.css";
 
 // CSS componentes
 import "./components/css/Navbar.css";
 import "./components/css/Header.css";
 import "./components/css/Draws.css";
+import "./components/css/MobileHeader.css";
+
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [isPCMode, setIsPCMode] = useState(window.innerWidth > 768); // Adjust the threshold based on your design
+  const handleResize = () => {
+    setIsPCMode(window.innerWidth > 768); // Adjust the threshold based on your design
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <Router>
       <div className="App">
-        <Navbar />
-        <Header />
-        <div className="App-container">
-          <Routes>
-            <Route path="/draws" element={<Draws />} />
-          </Routes>
-        </div>
+        {isPCMode ? (
+          <>
+            <Navbar />
+            <Header />
+            <div className="App-container">
+              <Routes>
+                <Route path="/draws" element={<Draws />} />
+              </Routes>
+            </div>
+          </>
+        ) : (
+          <MobileHeader />
+        )}
       </div>
     </Router>
   );
