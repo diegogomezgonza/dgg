@@ -6,7 +6,7 @@ const MobileHeader = () => {
     <div className="mobile-message">
       <h1 className="titleDGG text-white">DGG</h1>
       <hr className="appSeparator" />
-      <p className="text-white mt-4">
+      <p className="text-white mt-4 p-2">
         made by{" "}
         <a
           href="https://github.com/diegogomezgonza"
@@ -17,7 +17,7 @@ const MobileHeader = () => {
         </a>{" "}
         on GitHub.
       </p>
-      <p className="text-white mt-4">
+      <p className="text-white mt-4 p-2">
         Access through your pc to see all the drawings.
       </p>
       <MobileDraws />

@@ -48,7 +48,7 @@ const renderSocialMediaIcons = () => (
         rel="noopener noreferrer"
       >
         <div className="campanies__logo-box shadow-sm bg-transparent border border-0 rounded-pill">
-          <i className="fab fa-instagram fa-3x"></i>
+          <i className="fab fa-instagram fa-2x"></i>
         </div>
       </a>
     </div>
@@ -60,7 +60,7 @@ const renderSocialMediaIcons = () => (
         className="bg-transparent border border-0"
       >
         <div className="campanies__logo-box shadow-sm bg-transparent border border-0 rounded-pill">
-          <i className="fab fa-artstation fa-3x"></i>
+          <i className="fab fa-artstation fa-2x"></i>
         </div>
       </a>
     </div>
@@ -72,7 +72,7 @@ const renderSocialMediaIcons = () => (
         className="bg-transparent border border-0"
       >
         <div className="campanies__logo-box shadow-sm bg-transparent border border-0 rounded-pill">
-          <i className="fab fa-pinterest fa-3x"></i>
+          <i className="fab fa-pinterest fa-2x"></i>
         </div>
       </a>
     </div>
