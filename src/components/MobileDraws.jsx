@@ -26,7 +26,7 @@ const Mobile = () => {
               src="/pics/batman.jpg"
               alt="Harley Quinn"
               loader={<RingLoader color="#ffffff" size={60} />}
-              className="img-fluid w-100 border rounded"
+              className="img-fluid w-75 border rounded"
             />
             <p className="fs-2 text-white mt-3 fw-bold mb-0">Batman</p>
           </div>
