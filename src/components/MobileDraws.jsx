@@ -17,18 +17,18 @@ const Mobile = () => {
 
   return (
     <section>
-      <div className="project-card bg-transparent">
+      <div className="project-card-mobile bg-transparent">
         {isLoading ? (
           <RingLoader color="#ffffff" size={60} />
         ) : (
-          <div className="project-card border rounded">
+          <div className="project-card-mobile border rounded">
             <Img
               src="/pics/batman.jpg"
               alt="Harley Quinn"
-              loader={<RingLoader color="#000000" size={60} />}
+              loader={<RingLoader color="#ffffff" size={60} />}
               className="img-fluid w-100 border rounded"
             />
-            <p className="fs-2 text-black mt-4 fw-bold">Batman</p>
+            <p className="fs-2 text-white mt-3 fw-bold">Batman</p>
           </div>
         )}
       </div>
