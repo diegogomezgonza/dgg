@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Img } from "react-image";
 import RingLoader from "react-spinners/ClipLoader";
 import "./css/MobileDraws.css";
+import MobileSocial from "./MobileSocial";
 
 const Mobile = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,7 +25,7 @@ const Mobile = () => {
           <div className="project-card-mobile border rounded">
             <Img
               src="/pics/batman.jpg"
-              alt="Harley Quinn"
+              alt="Batman"
               loader={<RingLoader color="#ffffff" size={60} />}
               className="img-fluid w-75 border rounded"
             />
@@ -39,44 +40,6 @@ const Mobile = () => {
 };
 
 //Mostrar redes sociales
-const renderSocialMediaIcons = () => (
-  <div className="social-media-icons d-flex fixed-bottom">
-    <div className="col text-center mb-1">
-      <a
-        href="https://www.instagram.com/dgg.draws/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div className="campanies__logo-box shadow-sm bg-transparent border border-0 rounded-pill">
-          <i className="fab fa-instagram fa-2x"></i>
-        </div>
-      </a>
-    </div>
-    <div className="col text-center mb-1">
-      <a
-        href="https://www.artstation.com/dggdibujo"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-transparent border border-0"
-      >
-        <div className="campanies__logo-box shadow-sm bg-transparent border border-0 rounded-pill">
-          <i className="fab fa-artstation fa-2x"></i>
-        </div>
-      </a>
-    </div>
-    <div className="col text-center mb-3">
-      <a
-        href="https://www.pinterest.es/dggDraws/_created"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-transparent border border-0"
-      >
-        <div className="campanies__logo-box shadow-sm bg-transparent border border-0 rounded-pill">
-          <i className="fab fa-pinterest fa-2x"></i>
-        </div>
-      </a>
-    </div>
-  </div>
-);
+const renderSocialMediaIcons = () => <MobileSocial />;
 
 export default Mobile;

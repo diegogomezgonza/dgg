@@ -66,6 +66,10 @@ const Draws = () => {
           <Img src="/pics/robin.jpg" alt="Robin" loader={<RingLoader color="#ffffff" size={60} />} />
           <p className="fs-5 text-white mt-4">Robin</p>
         </div>
+        <div>
+          <Img src="/pics/nightwing.jpg" alt="Nightwing" loader={<RingLoader color="#ffffff" size={60} />} />
+          <p className="fs-5 text-white mt-4">Nightwing</p>
+        </div>
       </Slider>
     </section>
   );
