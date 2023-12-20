@@ -14,9 +14,9 @@ import "./components/css/MobileHeader.css";
 
 
 function App() {
-  const [isPCMode, setIsPCMode] = useState(window.innerWidth > 768); // Adjust the threshold based on your design
+  const [isPCMode, setIsPCMode] = useState(window.innerWidth > 1650);
   const handleResize = () => {
-    setIsPCMode(window.innerWidth > 768); // Adjust the threshold based on your design
+    setIsPCMode(window.innerWidth > 1650);
   };
 
   useEffect(() => {
