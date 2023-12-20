@@ -37,3 +37,12 @@ a:hover {
 .fixed-left {
   left: 0;
 }
+
+/* Enlaces a dibujos */
+
+.dcLink{
+  margin: 150px 0 0 auto;
+  position: relative;
+  right: 8px;
+  bottom: 40px
+}

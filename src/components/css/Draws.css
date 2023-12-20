@@ -11,9 +11,9 @@
 /* Scroll de imágenes */
 .slick-slider {
   max-width: 500px;
-  margin: 200px 0 0 auto;
+  margin: 150px 0 0 auto;
   position: relative;
-  margin-right: 500px;
+  right: 500px;
 }
 
 .slick-slide img {
