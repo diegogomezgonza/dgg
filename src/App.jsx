@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Draws from "./components/Draws";
+import OnePiece from "./components/OnePiece";
 import MobileHeader from "./components/MobileHeader";
 import "./css/App.css";
 
@@ -37,6 +38,7 @@ function App() {
             <div className="App-container">
               <Routes>
                 <Route path="/draws" element={<Draws />} />
+                <Route path="/onepiece" element={<OnePiece />} />
               </Routes>
             </div>
           </>

@@ -6,7 +6,8 @@ const Navbar = () => {
     <nav className="navbar text-center p-5 position-fixed end-0">
       <ul className="navbar-list">
         <li className="navbar-item">
-          <Link to="/draws" className="dcLink">DC</Link>
+          <Link to="/draws" className="dcLink mx-4">DC</Link>
+          <Link to="/onepiece" className="dcLink">OnePiece</Link>
         </li>
       </ul>
     </nav>
