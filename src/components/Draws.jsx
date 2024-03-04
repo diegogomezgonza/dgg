@@ -47,27 +47,27 @@ const Draws = () => {
     <section>
       <Slider {...settings}>
         <div>
-          <Img src="/pics/harley.jpg" alt="Harley Quinn" loader={<RingLoader color="#ffffff" size={60} />} />
+          <Img src="/pics/harley.webp" alt="Harley Quinn" loader={<RingLoader color="#ffffff" size={60} />} />
           <p className="fs-5 text-white mt-4">Harley Quinn</p>
         </div>
         <div>
-          <Img src="/pics/catwoman.jpg" alt="Catwoman" loader={<RingLoader color="#ffffff" size={60} />} />
+          <Img src="/pics/catwoman.webp" alt="Catwoman" loader={<RingLoader color="#ffffff" size={60} />} />
           <p className="fs-5 text-white mt-4">Catwoman</p>
         </div>
         <div>
-          <Img src="/pics/poisonivy.jpg" alt="Poison Ivy" loader={<RingLoader color="#ffffff" size={60} />} />
+          <Img src="/pics/poisonivy.webp" alt="Poison Ivy" loader={<RingLoader color="#ffffff" size={60} />} />
           <p className="fs-5 text-white mt-4">Poison Ivy</p>
         </div>
         <div>
-          <Img src="/pics/batman.jpg" alt="Batman" loader={<RingLoader color="#ffffff" size={60} />} />
+          <Img src="/pics/batman.webp" alt="Batman" loader={<RingLoader color="#ffffff" size={60} />} />
           <p className="fs-5 text-white mt-4">Batman</p>
         </div>
         <div>
-          <Img src="/pics/robin.jpg" alt="Robin" loader={<RingLoader color="#ffffff" size={60} />} />
+          <Img src="/pics/robin.webp" alt="Robin" loader={<RingLoader color="#ffffff" size={60} />} />
           <p className="fs-5 text-white mt-4">Robin</p>
         </div>
         <div>
-          <Img src="/pics/nightwing.jpg" alt="Nightwing" loader={<RingLoader color="#ffffff" size={60} />} />
+          <Img src="/pics/nightwing.webp" alt="Nightwing" loader={<RingLoader color="#ffffff" size={60} />} />
           <p className="fs-5 text-white mt-4">Nightwing</p>
         </div>
       </Slider>

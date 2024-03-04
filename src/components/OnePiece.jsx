@@ -47,7 +47,7 @@ const OnePiece = () => {
     <section>
       <Slider {...settings}>
         <div>
-          <Img src="/pics/onepiece/luffy.jpg" alt="Luffy" loader={<RingLoader color="#ffffff" size={60} />} />
+          <Img src="/pics/onepiece/luffy.webp" alt="Luffy" loader={<RingLoader color="#ffffff" size={60} />} />
           <p className="fs-5 text-white mt-4">Monkey D. Luffy</p>
         </div>
       </Slider>
