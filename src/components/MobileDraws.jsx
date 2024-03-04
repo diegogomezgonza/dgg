@@ -6,6 +6,7 @@ import MobileSocial from "./MobileSocial";
 
 const Mobile = () => {
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const fakeAsyncOperation = () => {
       setTimeout(() => {
@@ -17,20 +18,79 @@ const Mobile = () => {
   }, []);
 
   return (
-    <section>
-      <div className="project-card-mobile bg-transparent">
+    <section className="mobile-container">
+      <div className="mobile-draws">
         {isLoading ? (
+          <div className="spinner-container">
           <RingLoader color="#ffffff" size={60} />
+        </div>
         ) : (
-          <div className="project-card-mobile border rounded">
-            <Img
-              src="/pics/batman.jpg"
-              alt="Batman"
-              loader={<RingLoader color="#ffffff" size={60} />}
-              className="img-fluid w-75 border rounded"
-            />
-            <p className="fs-2 text-white mt-3 fw-bold mb-0">Batman</p>
+          <div className="mobile-draw-container">
+            <div className="mobile-draw border rounded">
+              <Img
+                src="/pics/harley.webp"
+                alt="harley"
+                loader={<RingLoader color="#ffffff" size={60} />}
+                className="img-fluid border rounded"
+              />
+              <p className="fs-2 text-white mt-3 fw-bold mb-0">Harley Quinn</p>
+            </div>
+            <div className="mobile-draw border rounded">
+              <Img
+                src="/pics/catwoman.webp"
+                alt="catwoman"
+                loader={<RingLoader color="#ffffff" size={60} />}
+                className="img-fluid border rounded"
+              />
+              <p className="fs-2 text-white mt-3 fw-bold mb-0">Catwoman</p>
+            </div>
+            <div className="mobile-draw border rounded">
+              <Img
+                src="/pics/poisonivy.webp"
+                alt="poisonivy"
+                loader={<RingLoader color="#ffffff" size={60} />}
+                className="img-fluid border rounded"
+              />
+              <p className="fs-2 text-white mt-3 fw-bold mb-0">Poison Ivy</p>
+            </div>
+            <div className="mobile-draw border rounded">
+              <Img
+                src="/pics/batman.webp"
+                alt="batman"
+                loader={<RingLoader color="#ffffff" size={60} />}
+                className="img-fluid border rounded"
+              />
+              <p className="fs-2 text-white mt-3 fw-bold mb-0">Batman</p>
+            </div>
+            <div className="mobile-draw border rounded">
+              <Img
+                src="/pics/robin.webp"
+                alt="robin"
+                loader={<RingLoader color="#ffffff" size={60} />}
+                className="img-fluid border rounded"
+              />
+              <p className="fs-2 text-white mt-3 fw-bold mb-0">Robin</p>
+            </div>
+            <div className="mobile-draw border rounded">
+              <Img
+                src="/pics/nightwing.webp"
+                alt="nightwing"
+                loader={<RingLoader color="#ffffff" size={60} />}
+                className="img-fluid border rounded"
+              />
+              <p className="fs-2 text-white mt-3 fw-bold mb-0">Nightwing</p>
+            </div>
+            <div className="mobile-draw border rounded">
+              <Img
+                src="/pics/onepiece/luffy.webp"
+                alt="luffy"
+                loader={<RingLoader color="#ffffff" size={60} />}
+                className="img-fluid border rounded"
+              />
+              <p className="fs-2 text-white mt-3 fw-bold mb-0">Luffy</p>
+            </div>
           </div>
+          
         )}
       </div>
       {/* Mostrar redes sociales llamando a la función que tiene el componente */}

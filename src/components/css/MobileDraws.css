@@ -1,16 +1,43 @@
-/* Sección dibujos */
+.mobile-container {
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
 
-.project-card-mobile {
+.mobile-draws {
+  display: flex;
+}
+
+.mobile-draw-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.mobile-draw {
   background-color: #000000;
-  color: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin-bottom: 20px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  max-width: 350px;
+}
+
+.mobile-draw img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mobile-draw:last-child {
+  margin-right: 0;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 /* Iconos en modo móvil */

@@ -17,9 +17,6 @@ const MobileHeader = () => {
         </a>{" "}
         on GitHub.
       </p>
-      <p className="text-white mt-4 p-2">
-        Access through your pc to see all the drawings.
-      </p>
       <MobileDraws />
     </div>
   );
