@@ -87,7 +87,16 @@ const Mobile = () => {
                 loader={<RingLoader color="#ffffff" size={60} />}
                 className="img-fluid border rounded"
               />
-              <p className="fs-2 text-white mt-3 fw-bold mb-0">Luffy</p>
+              <p className="fs-2 text-white mt-3 fw-bold mb-0">Monkey D. Luffy</p>
+            </div>
+            <div className="mobile-draw border rounded">
+              <Img
+                src="/pics/onepiece/zoro.webp"
+                alt="zoro"
+                loader={<RingLoader color="#ffffff" size={60} />}
+                className="img-fluid border rounded"
+              />
+              <p className="fs-2 text-white mt-3 fw-bold mb-0">Roronoa Zoro</p>
             </div>
           </div>
           
