@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Draws from "./components/Draws";
 import OnePiece from "./components/OnePiece";
+import Berserk from "./components/Berserk";
 import MobileHeader from "./components/MobileHeader";
 import "./css/App.css";
 
@@ -39,6 +40,7 @@ function App() {
               <Routes>
                 <Route path="/draws" element={<Draws />} />
                 <Route path="/onepiece" element={<OnePiece />} />
+                <Route path="/berserk" element={<Berserk />} />
               </Routes>
             </div>
           </>
