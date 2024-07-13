@@ -6,7 +6,7 @@ import RingLoader from "react-spinners/ClipLoader";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Berserk = () => {
+const EldenRing = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -47,12 +47,12 @@ const Berserk = () => {
     <section>
       <Slider {...settings}>
         <div>
-          <Img src="/pics/berserk/gutsBerserkArmor.jpg" alt="Guts" loader={<RingLoader color="#ffffff" size={60} />} />
-          <p className="fs-5 text-white mt-4">Guts</p>
+          <Img src="/pics/eldenring/messmer.webp" alt="Messmer" loader={<RingLoader color="#ffffff" size={60} />} />
+          <p className="fs-5 text-white mt-4">Messmer</p>
         </div>
       </Slider>
     </section>
   );
 };
 
-export default Berserk;
+export default EldenRing;

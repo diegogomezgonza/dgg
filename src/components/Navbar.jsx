@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./css/Navbar.css"; // Import your CSS file
+import "./css/Navbar.css";
 
 const Navbar = () => {
   return (
@@ -8,7 +8,8 @@ const Navbar = () => {
         <li className="navbar-item">
           <Link to="/draws" className="dcLink mx-2">DC</Link>
           <Link to="/onepiece" className="dcLink mx-2">OnePiece</Link>
-          <Link to="/berserk" className="dcLink">Berserk</Link>
+          <Link to="/berserk" className="dcLink mx-2">Berserk</Link>
+          <Link to="/eldenring" className="dcLink">EldenRing</Link>
         </li>
       </ul>
     </nav>
