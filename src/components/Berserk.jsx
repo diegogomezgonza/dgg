@@ -47,7 +47,7 @@ const Berserk = () => {
     <section>
       <Slider {...settings}>
         <div>
-          <Img src="/pics/berserk/gutsBerserkArmor.jpg" alt="Guts" loader={<RingLoader color="#ffffff" size={60} />} />
+          <Img src="/pics/berserk/gutsBerserkArmor.webp" alt="Guts" loader={<RingLoader color="#ffffff" size={60} />} />
           <p className="fs-5 text-white mt-4">Guts</p>
         </div>
       </Slider>

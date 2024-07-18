@@ -9,7 +9,7 @@ const Navbar = () => {
           <Link to="/draws" className="dcLink mx-2">DC</Link>
           <Link to="/onepiece" className="dcLink mx-2">OnePiece</Link>
           <Link to="/berserk" className="dcLink mx-2">Berserk</Link>
-          <Link to="/eldenring" className="dcLink">EldenRing</Link>
+          <Link to="/eldenring" className="dcLink mx-2">EldenRing</Link>
         </li>
       </ul>
     </nav>
