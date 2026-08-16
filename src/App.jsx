@@ -207,7 +207,6 @@ function AboutPage() {
   return (
     <main className="about-page page-width">
       <div className="page-intro"><span className="kicker">ABOUT ME</span><h1>About<br /><em>the artist.</em></h1><p>I am a traditional and digital artist. This is my art portfolio, where I share my drawings. If you have any questions, <a className="email-link" href="mailto:diegodibujando@gmail.com">write to me at diegodibujando@gmail.com</a>.</p></div>
-      <div className="about-grid"><p className="about-lead">Traditional and digital drawings, collected in one place.</p><div className="about-facts"><div><span>ARTIST</span><strong>GlezWorks</strong></div><div><span>FOCUS</span><strong>Characters<br />&amp; visual worlds</strong></div><div><span>CONTACT</span><a href="mailto:diegodibujando@gmail.com">diegodibujando@gmail.com ↗</a></div></div></div>
       <div className="about-image"><img src="/pics/poisonivy.webp" alt="Poison Ivy, estudio de personaje" /><span>AN ARCHIVE IS NEVER FINISHED.</span></div>
     </main>
   );
