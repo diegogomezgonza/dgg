@@ -14,7 +14,7 @@ button { color: inherit; font: inherit; }
 .footer-links a:hover, .text-link:hover { color: #988f78; }
 .brand-row { min-height: 132px; border-bottom: 1px solid var(--line); position: relative; }
 .brand-mark { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; }
-.brand-initials { font: 500 60px/.8 "Playfair Display", Georgia, serif; letter-spacing: -.075em; }
+.brand-initials { margin-left: -4px; font: 500 60px/.8 "Playfair Display", Georgia, serif; letter-spacing: -.075em; }
 .brand-caption { color: var(--muted); font: 10px "DM Mono", monospace; letter-spacing: .08em; }
 .main-nav { height: 51px; gap: 26px; font: 10px "DM Mono", monospace; letter-spacing: .07em; scrollbar-width: none; }
 .main-nav::-webkit-scrollbar { display: none; }
