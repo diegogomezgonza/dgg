@@ -169,7 +169,7 @@ function AboutPage() {
 }
 
 function SiteFooter() {
-  return <footer className="site-footer page-width"><div className="footer-mark">GlezWorks<span>© {new Date().getFullYear()}</span></div><div className="footer-links"><a href="https://www.instagram.com/dgg.draws/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://www.pinterest.es/dggDraws/_created" target="_blank" rel="noreferrer">Pinterest ↗</a><a href="https://github.com/diegogomezgonza" target="_blank" rel="noreferrer">GitHub ↗</a></div></footer>;
+  return <footer className="site-footer page-width"><div className="footer-mark">GlezWorks<span>© {new Date().getFullYear()}</span></div><div className="footer-links"><a href="https://www.instagram.com/glezworks/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://www.pinterest.es/dggDraws/_created" target="_blank" rel="noreferrer">Pinterest ↗</a><a href="https://github.com/diegogomezgonza" target="_blank" rel="noreferrer">GitHub ↗</a></div></footer>;
 }
 
 function App() {

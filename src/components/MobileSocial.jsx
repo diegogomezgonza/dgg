@@ -3,7 +3,7 @@ const MobileSocial = () => {
     <div className="social-media-icons d-flex fixed-bottom">
       <div className="col text-center mb-1">
         <a
-          href="https://www.instagram.com/dgg.draws/"
+          href="https://www.instagram.com/glezworks/"
           target="_blank"
           rel="noopener noreferrer"
         >

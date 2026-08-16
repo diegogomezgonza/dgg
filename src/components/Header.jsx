@@ -9,7 +9,7 @@ const Header = () => {
           <div className="row pt-3">
             <div className="col text-center mb-3">
               <a
-                href="https://www.instagram.com/dgg.draws/"
+                href="https://www.instagram.com/glezworks/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
