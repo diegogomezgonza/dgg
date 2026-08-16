@@ -116,13 +116,7 @@ function HomePage() {
     <main>
       <section className="hero-grid page-width">
         <div className="hero-copy">
-          <span className="kicker">WELCOME TO THE ARCHIVE</span>
-          <h1>Draw what<br /><em>stays with you.</em></h1>
-          <p>Un archivo vivo de ilustración, personajes y obsesiones visuales. GlezWorks es el lugar donde las referencias encuentran una nueva línea.</p>
-          <div className="hero-meta">
-            <span>SCROLL TO EXPLORE</span>
-            <span className="down-arrow">↓</span>
-          </div>
+          <h1>Scroll to explore</h1>
         </div>
         <div className="hero-frame">
           <img src="/pics/Guts Berserker.jpg" alt="Guts" />
