@@ -36,9 +36,9 @@ button { color: inherit; font: inherit; }
 .section-heading h2 { font: 500 32px/1 "Playfair Display", Georgia, serif; margin: 13px 0 0; letter-spacing: -.04em; }
 .text-link, .section-count { color: var(--muted); font: 10px "DM Mono", monospace; letter-spacing: .07em; }
 .text-link span { color: var(--ink); font-size: 15px; margin-left: 10px; }
-.featured-layout { display: grid; grid-template-columns: 58% 42%; min-height: 570px; background: #e8e7e0; }
-.featured-visual { min-height: 570px; position: relative; overflow: hidden; }
-.featured-visual img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 14%; animation: image-in .35s ease-out; }
+.featured-layout { display: grid; grid-template-columns: 58% 42%; height: 570px; background: #e8e7e0; }
+.featured-visual { height: 570px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #e8e7e0; }
+.featured-visual img { width: 100%; height: 100%; display: block; object-fit: contain; object-position: center; animation: image-in .35s ease-out; }
 @keyframes image-in { from { opacity: .35; transform: scale(1.015); } to { opacity: 1; transform: scale(1); } }
 .featured-stamp { position: absolute; bottom: 23px; left: 24px; width: 55px; height: 55px; border: 1px solid rgba(255,255,255,.8); color: white; border-radius: 50%; display: grid; place-content: center; text-align: center; font: 12px/.9 "Playfair Display", serif; transform: rotate(-12deg); }
 .featured-stamp small { font: 7px "DM Mono", monospace; letter-spacing: .04em; }
@@ -102,9 +102,9 @@ button { color: inherit; font: inherit; }
   .hero-copy h1, .page-intro h1 { font-size: 53px; }
   .featured-section { padding: 67px 0; }
   .section-heading h2 { font-size: 28px; }
-  .featured-layout { display: block; min-height: 0; }
+  .featured-layout { display: block; height: auto; }
   .featured-visual { height: 475px; min-height: 0; }
-  .featured-info { min-height: 420px; padding: 25px; }
+  .featured-info { height: 420px; min-height: 0; padding: 25px; }
   .feature-counter { margin-bottom: 55px; }
   .collection-intro, .page-intro { display: block; padding: 75px 0 42px; }
   .collection-intro h1 { font-size: 58px; margin-bottom: 32px; }

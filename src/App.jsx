@@ -114,7 +114,7 @@ function HomePage() {
       </section>
 
       <section className="featured-section page-width">
-        <SectionHeading kicker="01 / SELECTED WORK" title="From the desk" action={<NavLink to="/manga" className="text-link">VIEW ALL COLLECTIONS <span>↗</span></NavLink>} />
+        <SectionHeading kicker="01 / SELECTED WORK" title="Selected work" action={<NavLink to="/manga" className="text-link">VIEW ALL COLLECTIONS <span>↗</span></NavLink>} />
         <div className="featured-layout">
           <div className="featured-visual">
             <img src={featured.image} alt={featured.title} key={featured.image} />
