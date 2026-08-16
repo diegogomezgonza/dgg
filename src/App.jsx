@@ -118,8 +118,8 @@ function HomePage() {
           <h1>Explore</h1>
         </div>
         <div className="hero-frame">
-          <img src="/pics/Guts Berserker.jpg" alt="Guts" />
-          <div className="hero-label hero-label-bottom">GUTS</div>
+          <img src="/pics/Zoro.jpg" alt="Zoro" />
+          <div className="hero-label hero-label-bottom">ZORO</div>
         </div>
       </section>
 
