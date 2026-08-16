@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { BrowserRouter, NavLink, Route, Routes, useLocation } from "react-router-dom";
 import "./css/App.css";
+
+const LightboxContext = createContext(null);
 
 const collections = [
   {
@@ -108,6 +110,48 @@ function SectionHeading({ kicker, title, action }) {
   );
 }
 
+function ProtectedImage({ src, alt, className = "", openOnClick = true, ...props }) {
+  const lightbox = useContext(LightboxContext);
+  const openImage = () => {
+    if (openOnClick) lightbox.open({ src, alt });
+  };
+  const handleKeyDown = (event) => {
+    if (openOnClick && (event.key === "Enter" || event.key === " ")) {
+      event.preventDefault();
+      openImage();
+    }
+  };
+
+  return <img {...props} src={src} alt={alt} className={`protected-image ${className}`.trim()} draggable="false" onClick={openImage} onContextMenu={(event) => event.preventDefault()} onDragStart={(event) => event.preventDefault()} onKeyDown={handleKeyDown} role={openOnClick ? "button" : undefined} tabIndex={openOnClick ? 0 : undefined} />;
+}
+
+function ImageLightbox({ image, onClose }) {
+  useEffect(() => {
+    if (!image) return undefined;
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") onClose();
+    };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [image, onClose]);
+
+  if (!image) return null;
+
+  return (
+    <div className="lightbox" role="dialog" aria-modal="true" aria-label={`Vista ampliada de ${image.alt}`} onClick={onClose}>
+      <button type="button" className="lightbox-close" onClick={onClose} aria-label="Cerrar imagen">×</button>
+      <div className="lightbox-content" onClick={(event) => event.stopPropagation()}>
+        <ProtectedImage src={image.src} alt={image.alt} className="lightbox-image" openOnClick={false} />
+      </div>
+    </div>
+  );
+}
+
 function HomePage() {
   const [featuredIndex, setFeaturedIndex] = useState(0);
   const featured = featuredWorks[featuredIndex];
@@ -121,7 +165,7 @@ function HomePage() {
           <h1>Explore</h1>
         </div>
         <div className="hero-frame">
-          <img src="/pics/Zoro.jpg" alt="Zoro" />
+          <ProtectedImage src="/pics/Zoro.jpg" alt="Zoro" />
           <div className="hero-label hero-label-bottom">ZORO</div>
         </div>
       </section>
@@ -130,7 +174,7 @@ function HomePage() {
         <SectionHeading kicker="01 / SELECTED WORK" title="Selected work" action={<NavLink to="/manga" className="text-link">VIEW ALL COLLECTIONS <span>↗</span></NavLink>} />
         <div className="featured-layout">
           <div className="featured-visual">
-            <img src={featured.image} alt={featured.title} key={featured.image} />
+            <ProtectedImage src={featured.image} alt={featured.title} key={featured.image} />
             <span className="featured-stamp">GW<br /><small>ARCHIVE</small></span>
           </div>
           <div className="featured-info">
@@ -150,7 +194,7 @@ function HomePage() {
 }
 
 function WorkImage({ work, priority = false }) {
-  return <div className="work-image"><img src={work.image} alt={work.title} loading={priority ? "eager" : "lazy"} /></div>;
+  return <div className="work-image"><ProtectedImage src={work.image} alt={work.title} loading={priority ? "eager" : "lazy"} /></div>;
 }
 
 function CollectionPage({ collection }) {
@@ -165,7 +209,7 @@ function CollectionPage({ collection }) {
           {collections.map((item) => <NavLink to={`/${item.slug}`} className={({ isActive }) => isActive ? "active" : ""} key={item.slug}>{item.label}</NavLink>)}
         </div>
       </div>
-      <div className="collection-feature"><div className="collection-feature-image"><img src={featuredWork.image} alt={featuredWork.title} /></div><div className="collection-feature-copy"><h2>{featuredWork.title}</h2></div></div>
+      <div className="collection-feature"><div className="collection-feature-image"><ProtectedImage src={featuredWork.image} alt={featuredWork.title} /></div><div className="collection-feature-copy"><h2>{featuredWork.title}</h2></div></div>
       <div className="work-grid">{collection.works.map((work, index) => <article className="work-card" key={work.id}><WorkImage work={work} priority={index < 2} /><div className="work-card-meta"><h2>{work.title}</h2></div></article>)}</div>
       <div className="collection-end"><span>END OF SERIES</span><NavLink to="/" className="text-link">BACK TO INDEX <span>↗</span></NavLink></div>
     </main>
@@ -176,7 +220,7 @@ function AboutPage() {
   return (
     <main className="about-page page-width">
       <div className="page-intro"><h1>About<br /><em>the artist.</em></h1><p>I’m a traditional and digital artist, as well as a developer. This portfolio is a collection of my drawings and creative work. If you have any questions or would like to get in touch, feel free to email me at <a className="email-link" href="mailto:diegodibujando@gmail.com"><strong>diegodibujando@gmail.com</strong></a>.</p></div>
-      <div className="about-image"><img src="/pics/poisonivy.webp" alt="Poison Ivy, estudio de personaje" /></div>
+      <div className="about-image"><ProtectedImage src="/pics/poisonivy.webp" alt="Poison Ivy, estudio de personaje" /></div>
     </main>
   );
 }
@@ -186,7 +230,9 @@ function SiteFooter() {
 }
 
 function App() {
-  return <BrowserRouter><div className="App" id="top"><SiteHeader /><Routes><Route path="/" element={<HomePage />} />{collections.map((collection) => <Route key={collection.slug} path={`/${collection.slug}`} element={<CollectionPage collection={collection} />} />)}<Route path="/about" element={<AboutPage />} /></Routes><SiteFooter /></div></BrowserRouter>;
+  const [lightboxImage, setLightboxImage] = useState(null);
+
+  return <LightboxContext.Provider value={{ open: setLightboxImage }}><BrowserRouter><div className="App" id="top"><SiteHeader /><Routes><Route path="/" element={<HomePage />} />{collections.map((collection) => <Route key={collection.slug} path={`/${collection.slug}`} element={<CollectionPage collection={collection} />} />)}<Route path="/about" element={<AboutPage />} /></Routes><SiteFooter /><ImageLightbox image={lightboxImage} onClose={() => setLightboxImage(null)} /></div></BrowserRouter></LightboxContext.Provider>;
 }
 
 export default App;
