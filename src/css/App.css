@@ -90,6 +90,9 @@ button { color: inherit; font: inherit; }
 
 @media (max-width: 800px) {
   body, button, a { font-size: 11px; }
+  .brand-row, .main-nav, .hero-grid, .featured-section, .featured-layout, .collection-intro, .collection-controls, .collection-feature, .page-intro, .site-footer { min-width: 0; }
+  .hero-copy, .hero-frame, .featured-visual, .featured-info, .collection-feature-image, .collection-feature-copy, .page-intro > * { min-width: 0; }
+  .hero-frame img, .featured-visual img, .collection-feature-image img, .work-image img, .about-image img { max-width: 100%; }
   .page-width { width: calc(100% - 36px); }
   .site-header { padding: 14px 18px 0; }
   .brand-row { min-height: 107px; }
@@ -112,7 +115,7 @@ button { color: inherit; font: inherit; }
   .collection-intro h1 { font-size: 58px; margin-bottom: 32px; }
   .collection-intro p, .page-intro p { margin: 0; max-width: 320px; }
   .collection-controls { display: flex; padding: 18px 0; }
-  .collection-switcher { gap: 16px; overflow-x: auto; white-space: nowrap; }
+  .collection-switcher { gap: 16px; max-width: 100%; min-width: 0; overflow-x: auto; white-space: nowrap; }
   .collection-feature { display: block; min-height: 0; margin: 35px 0 75px; }
   .collection-feature-image { height: 430px; }
   .collection-feature-copy { min-height: 180px; border-left: 0; border-top: 1px solid var(--line); }
