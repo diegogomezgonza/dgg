@@ -79,7 +79,6 @@ function SiteHeader() {
         <NavLink to="/" className="brand-mark" aria-label="GlezWorks, volver al inicio">
           <span className="brand-initials">GlezWorks</span>
         </NavLink>
-        <span className="edition-number">NO. 07 / 26</span>
       </div>
 
       <nav className="main-nav" aria-label="Navegación principal">
