@@ -175,7 +175,7 @@ function CollectionPage({ collection }) {
 function AboutPage() {
   return (
     <main className="about-page page-width">
-      <div className="page-intro"><h1>About<br /><em>the artist.</em></h1><p>I am a traditional and digital artist and developer. This is my art portfolio, where I share my drawings. If you have any questions, <a className="email-link" href="mailto:diegodibujando@gmail.com"><strong>write to me at diegodibujando@gmail.com</strong></a>.</p></div>
+      <div className="page-intro"><h1>About<br /><em>the artist.</em></h1><p>I’m a traditional and digital artist, as well as a developer. This portfolio is a collection of my drawings and creative work. If you have any questions or would like to get in touch, feel free to email me at <a className="email-link" href="mailto:diegodibujando@gmail.com"><strong>diegodibujando@gmail.com</strong></a>.</p></div>
       <div className="about-image"><img src="/pics/poisonivy.webp" alt="Poison Ivy, estudio de personaje" /></div>
     </main>
   );
