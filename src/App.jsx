@@ -116,7 +116,7 @@ function HomePage() {
     <main>
       <section className="hero-grid page-width">
         <div className="hero-copy">
-          <h1>Scroll to explore</h1>
+          <h1>Explore</h1>
         </div>
         <div className="hero-frame">
           <img src="/pics/Guts Berserker.jpg" alt="Guts" />
