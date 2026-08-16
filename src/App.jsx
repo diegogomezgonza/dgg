@@ -25,8 +25,8 @@ const collections = [
   },
   {
     slug: "videojuegos",
-    label: "VIDEOJUEGOS",
-    title: "VIDEOJUEGOS",
+    label: "VIDEOGAMES",
+    title: "VIDEOGAMES",
     image: "/pics/Kratos.jpg",
     year: "2023—26",
     works: [
@@ -38,8 +38,8 @@ const collections = [
   },
   {
     slug: "superheroes",
-    label: "SUPERHEROES",
-    title: "SUPERHEROES",
+    label: "SUPERHEROS",
+    title: "SUPERHEROS",
     image: "/pics/Spider-Man vs Venom.jpg",
     year: "2023—26",
     works: [
@@ -57,8 +57,8 @@ const collections = [
 
 const featuredWorks = [
   { title: "Guts", collection: "MANGA", image: "/pics/Guts Berserker.jpg" },
-  { title: "Kratos", collection: "VIDEOJUEGOS", image: "/pics/Kratos.jpg" },
-  { title: "Spider-Man vs Venom", collection: "SUPERHEROES", image: "/pics/Spider-Man vs Venom.jpg" },
+  { title: "Kratos", collection: "VIDEOGAMES", image: "/pics/Kratos.jpg" },
+  { title: "Spider-Man vs Venom", collection: "SUPERHEROS", image: "/pics/Spider-Man vs Venom.jpg" },
 ];
 
 function SiteHeader() {
