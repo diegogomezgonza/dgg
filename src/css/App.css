@@ -16,13 +16,11 @@ button { color: inherit; font: inherit; }
 .brand-mark { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; }
 .brand-initials { font: 500 60px/.8 "Playfair Display", Georgia, serif; letter-spacing: -.075em; }
 .brand-caption { color: var(--muted); font: 10px "DM Mono", monospace; letter-spacing: .08em; }
-.main-nav { height: 51px; gap: 26px; border-bottom: 1px solid var(--line); font: 10px "DM Mono", monospace; letter-spacing: .07em; scrollbar-width: none; }
+.main-nav { height: 51px; gap: 26px; font: 10px "DM Mono", monospace; letter-spacing: .07em; scrollbar-width: none; }
 .main-nav::-webkit-scrollbar { display: none; }
 .main-nav a { color: var(--muted); }
 .main-nav a:hover, .main-nav a.active { color: var(--ink); }
 .main-nav a.active { border-bottom: 1px solid var(--ink); padding-bottom: 18px; }
-.nav-rule { height: 1px; flex: 1; background: var(--line); }
-.language-switch { color: var(--muted); }
 .kicker { display: block; color: var(--muted); font: 10px "DM Mono", monospace; letter-spacing: .08em; }
 .hero-grid { display: grid; grid-template-columns: 40% 60%; min-height: 620px; border-bottom: 1px solid var(--line); }
 .hero-copy { display: flex; flex-direction: column; justify-content: center; padding: 50px 10% 50px 0; }
@@ -104,8 +102,6 @@ button { color: inherit; font: inherit; }
   .brand-caption { font-size: 8px; }
   .main-nav { gap: 13px; overflow-x: auto; white-space: nowrap; font-size: 8px; }
   .main-nav a.active { padding-bottom: 18px; }
-  .nav-rule { min-width: 15px; }
-  .language-switch { font-size: 8px; }
   .hero-grid { display: flex; flex-direction: column-reverse; min-height: 0; }
   .hero-frame { min-height: 480px; border-left: 0; }
   .hero-copy { padding: 46px 0 50px; }

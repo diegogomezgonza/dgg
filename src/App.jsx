@@ -78,8 +78,6 @@ function SiteHeader() {
         <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>INDEX</NavLink>
         <NavLink to="/manga" className={isCollection ? "active" : ""}>COLLECTIONS</NavLink>
         <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>ABOUT ME</NavLink>
-        <span className="nav-rule" />
-        <span className="language-switch">ES / EN</span>
       </nav>
     </header>
   );
