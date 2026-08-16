@@ -17,7 +17,6 @@ button { color: inherit; font: inherit; }
 .brand-row { min-height: 132px; border-bottom: 1px solid var(--line); position: relative; }
 .brand-mark { display: flex; align-items: flex-end; gap: 17px; }
 .brand-initials { font: 500 60px/.8 "Playfair Display", Georgia, serif; letter-spacing: -.075em; }
-.brand-caption { font: 10px/1.35 "DM Mono", monospace; letter-spacing: .06em; margin-bottom: 2px; }
 .edition-number { align-self: flex-start; margin: 16px 0 0 auto; color: var(--muted); font: 10px "DM Mono", monospace; }
 .main-nav { height: 51px; gap: 26px; border-bottom: 1px solid var(--line); font: 10px "DM Mono", monospace; letter-spacing: .07em; scrollbar-width: none; }
 .main-nav::-webkit-scrollbar { display: none; }
@@ -107,7 +106,6 @@ button { color: inherit; font: inherit; }
   .brand-row { min-height: 107px; }
   .brand-mark { gap: 10px; }
   .brand-initials { font-size: 42px; }
-  .brand-caption { font-size: 8px; }
   .edition-number { margin-top: 12px; font-size: 8px; }
   .main-nav { gap: 13px; overflow-x: auto; white-space: nowrap; font-size: 8px; }
   .main-nav a.active { padding-bottom: 18px; }

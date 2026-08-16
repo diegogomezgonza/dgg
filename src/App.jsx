@@ -68,7 +68,7 @@ function SiteHeader() {
   return (
     <header className="site-header">
       <div className="utility-bar">
-        <span>GLEZWORKS / DRAWING ARCHIVE</span>
+        <span>GLEZWORKS / DRAWING PORTFOLIO</span>
         <div className="utility-links">
           <a href="https://www.instagram.com/dgg.draws/" target="_blank" rel="noreferrer">Instagram</a>
           <a href="https://www.artstation.com/dggdibujo" target="_blank" rel="noreferrer">ArtStation</a>
@@ -78,7 +78,6 @@ function SiteHeader() {
       <div className="brand-row">
         <NavLink to="/" className="brand-mark" aria-label="GlezWorks, volver al inicio">
           <span className="brand-initials">GlezWorks</span>
-          <span className="brand-caption">DIGITAL DRAWINGS<br />&amp; VISUAL NOTES</span>
         </NavLink>
         <span className="edition-number">NO. 07 / 26</span>
       </div>
