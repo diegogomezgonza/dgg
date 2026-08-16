@@ -132,18 +132,6 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="collections-section page-width">
-        <SectionHeading title="Collections" />
-        <div className="collection-list">
-          {collections.map((collection, index) => (
-            <NavLink to={`/${collection.slug}`} className="collection-row" key={collection.slug}>
-              <span className="collection-number">0{index + 1}</span>
-              <span className="collection-name">{collection.label}</span>
-              <span className="collection-arrow">↗</span>
-            </NavLink>
-          ))}
-        </div>
-      </section>
     </main>
   );
 }

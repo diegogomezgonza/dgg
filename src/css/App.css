@@ -31,7 +31,7 @@ button { color: inherit; font: inherit; }
 .hero-label { position: absolute; font: 10px "DM Mono", monospace; letter-spacing: .08em; }
 .hero-label-bottom { right: 24px; bottom: 20px; color: white; text-align: right; line-height: 1.7; text-shadow: 0 1px 8px #333; }
 .hero-label-bottom span { font-size: 9px; opacity: .72; }
-.featured-section, .collections-section { padding: 95px 0; border-bottom: 1px solid var(--line); }
+.featured-section { padding: 95px 0; border-bottom: 1px solid var(--line); }
 .section-heading { justify-content: space-between; margin-bottom: 39px; }
 .section-heading h2 { font: 500 32px/1 "Playfair Display", Georgia, serif; margin: 13px 0 0; letter-spacing: -.04em; }
 .text-link, .section-count { color: var(--muted); font: 10px "DM Mono", monospace; letter-spacing: .07em; }
@@ -51,12 +51,6 @@ button { color: inherit; font: inherit; }
 .slider-controls { display: flex; gap: 8px; margin-top: 24px; }
 .slider-controls button { width: 38px; height: 38px; border: 1px solid var(--line); background: transparent; cursor: pointer; font-size: 18px; transition: background .2s, color .2s; }
 .slider-controls button:hover { background: var(--ink); color: var(--paper); }
-.collection-list { border-top: 1px solid var(--line); }
-.collection-row { min-height: 84px; display: grid; grid-template-columns: 8% 1fr 5%; align-items: center; border-bottom: 1px solid var(--line); transition: padding .25s, background .25s; }
-.collection-row:hover { padding-inline: 14px; background: #efeee8; }
-.collection-number, .collection-arrow { color: var(--muted); font: 10px "DM Mono", monospace; }
-.collection-name { font: 500 19px "Playfair Display", serif; }
-.collection-arrow { justify-self: end; font-size: 17px; color: var(--ink); }
 .collection-page, .about-page { padding-bottom: 110px; }
 .collection-intro { min-height: 330px; display: grid; grid-template-columns: 1fr; align-items: end; padding: 76px 0 45px; border-bottom: 1px solid var(--line); }
 .collection-intro h1 { font: 500 clamp(44px, 6vw, 85px)/.95 "Playfair Display", serif; letter-spacing: -.06em; margin: 20px 0 0; }
@@ -106,14 +100,12 @@ button { color: inherit; font: inherit; }
   .hero-frame { min-height: 480px; border-left: 0; }
   .hero-copy { padding: 46px 0 50px; }
   .hero-copy h1, .page-intro h1 { font-size: 53px; }
-  .featured-section, .collections-section { padding: 67px 0; }
+  .featured-section { padding: 67px 0; }
   .section-heading h2 { font-size: 28px; }
   .featured-layout { display: block; min-height: 0; }
   .featured-visual { height: 475px; min-height: 0; }
   .featured-info { min-height: 420px; padding: 25px; }
   .feature-counter { margin-bottom: 55px; }
-  .collection-row { grid-template-columns: 11% 1fr 5%; min-height: 92px; gap: 9px; }
-  .collection-name { font-size: 17px; }
   .collection-intro, .page-intro { display: block; padding: 75px 0 42px; }
   .collection-intro h1 { font-size: 58px; margin-bottom: 32px; }
   .collection-intro p, .page-intro p { margin: 0; max-width: 320px; }
