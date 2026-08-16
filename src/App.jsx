@@ -173,7 +173,12 @@ function CollectionPage({ collection }) {
   return (
     <main className="collection-page page-width">
       <div className="collection-intro"><span className="kicker">COLLECTION / {collection.year}</span><h1>{collection.title}</h1></div>
-      <div className="collection-controls"><span>{String(collection.works.length).padStart(2, "0")} WORKS</span></div>
+      <div className="collection-controls">
+        <span>{String(collection.works.length).padStart(2, "0")} WORKS</span>
+        <div className="collection-switcher" aria-label="Cambiar de colección">
+          {collections.map((item) => <NavLink to={`/${item.slug}`} className={({ isActive }) => isActive ? "active" : ""} key={item.slug}>{item.label}</NavLink>)}
+        </div>
+      </div>
       <div className="collection-feature"><div className="collection-feature-image"><img src={featuredWork.image} alt={featuredWork.title} /></div><div className="collection-feature-copy"><h2>{featuredWork.title}</h2></div></div>
       <div className="work-grid">{collection.works.map((work, index) => <article className="work-card" key={work.id}><WorkImage work={work} priority={index < 2} /><div className="work-card-meta"><h2>{work.title}</h2></div></article>)}</div>
       <div className="collection-end"><span>END OF SERIES</span><NavLink to="/" className="text-link">BACK TO INDEX <span>↗</span></NavLink></div>
