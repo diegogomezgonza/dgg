@@ -67,17 +67,10 @@ function SiteHeader() {
 
   return (
     <header className="site-header">
-      <div className="utility-bar">
-        <span>GLEZWORKS / DRAWING PORTFOLIO</span>
-        <div className="utility-links">
-          <a href="https://www.instagram.com/dgg.draws/" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="https://www.artstation.com/dggdibujo" target="_blank" rel="noreferrer">ArtStation</a>
-        </div>
-      </div>
-
       <div className="brand-row">
         <NavLink to="/" className="brand-mark" aria-label="GlezWorks, volver al inicio">
           <span className="brand-initials">GlezWorks</span>
+          <span className="brand-caption">DRAWING PORTFOLIO</span>
         </NavLink>
       </div>
 
@@ -96,7 +89,7 @@ function SectionHeading({ kicker, title, action }) {
   return (
     <div className="section-heading">
       <div>
-        <span className="kicker">{kicker}</span>
+        {kicker && <span className="kicker">{kicker}</span>}
         <h2>{title}</h2>
       </div>
       {action}
@@ -122,14 +115,8 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="statement-band page-width">
-        <span className="kicker">01 / THE POINT OF VIEW</span>
-        <p>“The work begins with a character, but it ends somewhere else.”</p>
-        <span className="statement-note">GLEZWORKS, ON PROCESS</span>
-      </section>
-
       <section className="featured-section page-width">
-        <SectionHeading kicker="02 / SELECTED WORK" title="From the desk" action={<NavLink to="/manga" className="text-link">VIEW ALL COLLECTIONS <span>↗</span></NavLink>} />
+        <SectionHeading kicker="01 / SELECTED WORK" title="From the desk" action={<NavLink to="/manga" className="text-link">VIEW ALL COLLECTIONS <span>↗</span></NavLink>} />
         <div className="featured-layout">
           <div className="featured-visual">
             <img src={featured.image} alt={featured.title} key={featured.image} />
@@ -148,7 +135,7 @@ function HomePage() {
       </section>
 
       <section className="collections-section page-width">
-        <SectionHeading kicker="03 / THE ARCHIVE" title="Collections" action={<span className="section-count">03 SERIES</span>} />
+        <SectionHeading title="Collections" />
         <div className="collection-list">
           {collections.map((collection, index) => (
             <NavLink to={`/${collection.slug}`} className="collection-row" key={collection.slug}>
