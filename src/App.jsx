@@ -70,7 +70,7 @@ function SiteHeader() {
       <div className="brand-row">
         <NavLink to="/" className="brand-mark" aria-label="GlezWorks, volver al inicio">
           <span className="brand-initials">GlezWorks</span>
-          <span className="brand-caption">DRAWING PORTFOLIO</span>
+          <span className="brand-caption">Diego Gómez González</span>
         </NavLink>
       </div>
 
@@ -163,7 +163,7 @@ function AboutPage() {
   return (
     <main className="about-page page-width">
       <div className="page-intro"><h1>About<br /><em>the artist.</em></h1><p>I am a traditional and digital artist. This is my art portfolio, where I share my drawings. If you have any questions, <a className="email-link" href="mailto:diegodibujando@gmail.com"><strong>write to me at diegodibujando@gmail.com</strong></a>.</p></div>
-      <div className="about-image"><img src="/pics/poisonivy.webp" alt="Poison Ivy, estudio de personaje" /><span>AN ARCHIVE IS NEVER FINISHED.</span></div>
+      <div className="about-image"><img src="/pics/poisonivy.webp" alt="Poison Ivy, estudio de personaje" /></div>
     </main>
   );
 }
