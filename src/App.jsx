@@ -56,9 +56,9 @@ const collections = [
 ];
 
 const featuredWorks = [
-  { title: "Guts", collection: "MANGA", image: "/pics/Guts Berserker.jpg", date: "06.2025" },
-  { title: "Kratos", collection: "VIDEOJUEGOS", image: "/pics/Kratos.jpg", date: "04.2025" },
-  { title: "Spider-Man vs Venom", collection: "SUPERHEROES", image: "/pics/Spider-Man vs Venom.jpg", date: "11.2024" },
+  { title: "Guts", collection: "MANGA", image: "/pics/Guts Berserker.jpg" },
+  { title: "Kratos", collection: "VIDEOJUEGOS", image: "/pics/Kratos.jpg" },
+  { title: "Spider-Man vs Venom", collection: "SUPERHEROES", image: "/pics/Spider-Man vs Venom.jpg" },
 ];
 
 function SiteHeader() {
@@ -141,7 +141,6 @@ function HomePage() {
             <div className="feature-counter"><span>0{featuredIndex + 1}</span><span className="counter-line" /><span>0{featuredWorks.length}</span></div>
             <h3>{featured.title}</h3>
             <p className="feature-collection">{featured.collection}</p>
-            <div className="feature-footer"><span>{featured.date}</span><span>PERSONAL WORK</span></div>
             <div className="slider-controls">
               <button type="button" onClick={previousFeatured} aria-label="Obra anterior">←</button>
               <button type="button" onClick={nextFeatured} aria-label="Siguiente obra">→</button>
