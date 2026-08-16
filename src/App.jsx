@@ -8,7 +8,7 @@ const collections = [
     slug: "draws",
     label: "DC / CHARACTERS",
     title: "DC Characters",
-    description: "Retratos, estudios y versiones personales de algunos de los personajes que más han acompañado el archivo de DGG.",
+    description: "Retratos, estudios y versiones personales de algunos de los personajes que más han acompañado el archivo de GlezWorks.",
     image: "/pics/harley.webp",
     year: "2024—25",
     works: [
@@ -69,7 +69,7 @@ function SiteHeader() {
   return (
     <header className="site-header">
       <div className="utility-bar">
-        <span>DGG / DRAWING ARCHIVE</span>
+        <span>GLEZWORKS / DRAWING ARCHIVE</span>
         <span className="utility-center">EST. 2018 — MADRID</span>
         <div className="utility-links">
           <a href="https://www.instagram.com/dgg.draws/" target="_blank" rel="noreferrer">Instagram</a>
@@ -78,8 +78,8 @@ function SiteHeader() {
       </div>
 
       <div className="brand-row">
-        <NavLink to="/" className="brand-mark" aria-label="DGG, volver al inicio">
-          <span className="brand-initials">DGG</span>
+        <NavLink to="/" className="brand-mark" aria-label="GlezWorks, volver al inicio">
+          <span className="brand-initials">GlezWorks</span>
           <span className="brand-caption">DIGITAL DRAWINGS<br />&amp; VISUAL NOTES</span>
         </NavLink>
         <p className="brand-statement">A personal index of characters,<br />worlds and things worth drawing.</p>
@@ -90,7 +90,7 @@ function SiteHeader() {
         <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>INDEX</NavLink>
         <NavLink to="/draws" className={isCollection ? "active" : ""}>COLLECTIONS</NavLink>
         <NavLink to="/journal" className={({ isActive }) => isActive ? "active" : ""}>JOURNAL</NavLink>
-        <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>ABOUT DGG</NavLink>
+        <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>ABOUT GLEZWORKS</NavLink>
         <span className="nav-rule" />
         <span className="language-switch">ES / EN</span>
       </nav>
@@ -131,7 +131,7 @@ function HomePage() {
         <div className="hero-copy">
           <span className="kicker">WELCOME TO THE ARCHIVE</span>
           <h1>Draw what<br /><em>stays with you.</em></h1>
-          <p>Un archivo vivo de ilustración, personajes y obsesiones visuales. DGG es el lugar donde las referencias encuentran una nueva línea.</p>
+          <p>Un archivo vivo de ilustración, personajes y obsesiones visuales. GlezWorks es el lugar donde las referencias encuentran una nueva línea.</p>
           <div className="hero-meta">
             <span>SCROLL TO EXPLORE</span>
             <span className="down-arrow">↓</span>
@@ -147,7 +147,7 @@ function HomePage() {
       <section className="statement-band page-width">
         <span className="kicker">01 / THE POINT OF VIEW</span>
         <p>“The work begins with a character, but it ends somewhere else.”</p>
-        <span className="statement-note">DGG, ON PROCESS</span>
+        <span className="statement-note">GLEZWORKS, ON PROCESS</span>
       </section>
 
       <section className="featured-section page-width">
@@ -155,7 +155,7 @@ function HomePage() {
         <div className="featured-layout">
           <div className="featured-visual">
             <img src={featured.image} alt={featured.title} key={featured.image} />
-            <span className="featured-stamp">DGG<br /><small>ARCHIVE</small></span>
+            <span className="featured-stamp">GW<br /><small>ARCHIVE</small></span>
           </div>
           <div className="featured-info">
             <div className="feature-counter"><span>0{featuredIndex + 1}</span><span className="counter-line" /><span>0{featuredWorks.length}</span></div>
@@ -207,7 +207,7 @@ function CollectionPage({ collection }) {
     <main className="collection-page page-width">
       <div className="collection-intro"><div><span className="kicker">COLLECTION / {collection.year}</span><h1>{collection.title}</h1></div><p>{collection.description}</p></div>
       <div className="collection-controls"><span>{String(collection.works.length).padStart(2, "0")} WORKS</span><div>{filters.map((item) => <button type="button" key={item} className={filter === item ? "selected" : ""} onClick={() => setFilter(item)}>{item}</button>)}</div></div>
-      <div className="collection-feature"><div className="collection-feature-image"><img src={collection.image} alt={collection.title} /></div><div className="collection-feature-copy"><span className="kicker">SERIES NOTE</span><p>Una colección de imágenes encontradas, redibujadas y vueltas a mirar hasta que algo nuevo aparece.</p><span className="vertical-caption">DGG / {collection.label}</span></div></div>
+      <div className="collection-feature"><div className="collection-feature-image"><img src={collection.image} alt={collection.title} /></div><div className="collection-feature-copy"><span className="kicker">SERIES NOTE</span><p>Una colección de imágenes encontradas, redibujadas y vueltas a mirar hasta que algo nuevo aparece.</p><span className="vertical-caption">GLEZWORKS / {collection.label}</span></div></div>
       <div className="work-grid">{visibleWorks.map((work, index) => <article className="work-card" key={work.title}><WorkImage work={work} priority={index < 2} /><div className="work-card-meta"><h2>{work.title}</h2><span>{work.tag}</span></div></article>)}</div>
       <div className="collection-end"><span>END OF SERIES</span><NavLink to="/" className="text-link">BACK TO INDEX <span>↗</span></NavLink></div>
     </main>
@@ -230,15 +230,15 @@ function JournalPage() {
 function AboutPage() {
   return (
     <main className="about-page page-width">
-      <div className="page-intro"><span className="kicker">ABOUT / DGG</span><h1>Personal work,<br /><em>kept in public.</em></h1></div>
-      <div className="about-grid"><p className="about-lead">DGG es un archivo personal de dibujos digitales y notas visuales. Un lugar para reunir personajes, referencias y estudios que merecen una segunda mirada.</p><div className="about-facts"><div><span>BASED IN</span><strong>Madrid, ES</strong></div><div><span>FOCUS</span><strong>Characters<br />&amp; visual worlds</strong></div><div><span>CONTACT</span><a href="mailto:dgg.dibujo@gmail.com">dgg.dibujo@gmail.com ↗</a></div></div></div>
+      <div className="page-intro"><span className="kicker">ABOUT / GLEZWORKS</span><h1>Personal work,<br /><em>kept in public.</em></h1></div>
+      <div className="about-grid"><p className="about-lead">GlezWorks es un archivo personal de dibujos digitales y notas visuales. Un lugar para reunir personajes, referencias y estudios que merecen una segunda mirada.</p><div className="about-facts"><div><span>BASED IN</span><strong>Madrid, ES</strong></div><div><span>FOCUS</span><strong>Characters<br />&amp; visual worlds</strong></div><div><span>CONTACT</span><a href="mailto:dgg.dibujo@gmail.com">dgg.dibujo@gmail.com ↗</a></div></div></div>
       <div className="about-image"><img src="/pics/poisonivy.webp" alt="Poison Ivy, estudio de personaje" /><span>AN ARCHIVE IS NEVER FINISHED.</span></div>
     </main>
   );
 }
 
 function SiteFooter() {
-  return <footer className="site-footer page-width"><div className="footer-mark">DGG<span>© 2025</span></div><p>DRAWINGS, CHARACTERS<br />AND VISUAL NOTES.</p><div className="footer-links"><a href="https://www.instagram.com/dgg.draws/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://www.pinterest.es/dggDraws/_created" target="_blank" rel="noreferrer">Pinterest ↗</a><a href="https://github.com/diegogomezgonza" target="_blank" rel="noreferrer">GitHub ↗</a></div><span className="footer-end">MADE BY DGG / 2025</span></footer>;
+  return <footer className="site-footer page-width"><div className="footer-mark">GlezWorks<span>© 2025</span></div><p>DRAWINGS, CHARACTERS<br />AND VISUAL NOTES.</p><div className="footer-links"><a href="https://www.instagram.com/dgg.draws/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://www.pinterest.es/dggDraws/_created" target="_blank" rel="noreferrer">Pinterest ↗</a><a href="https://github.com/diegogomezgonza" target="_blank" rel="noreferrer">GitHub ↗</a></div><span className="footer-end">MADE BY GLEZWORKS / 2025</span></footer>;
 }
 
 function App() {

@@ -1,5 +1,5 @@
-# DGG Arts - Portfolio de Dibujos
-DGG Arts es un portfolio de dibujos creado utilizando React y Vite. Este portfolio tiene un diseño responsive, lo que significa que se adapta a diferentes tamaños de pantalla, permitiendo a los usuarios visualizar los dibujos de manera óptima en dispositivos móviles, tabletas y computadoras de escritorio.
+# GlezWorks - Portfolio de Dibujos
+GlezWorks es un portfolio de dibujos creado utilizando React y Vite. Este portfolio tiene un diseño responsive, lo que significa que se adapta a diferentes tamaños de pantalla, permitiendo a los usuarios visualizar los dibujos de manera óptima en dispositivos móviles, tabletas y computadoras de escritorio.
 
 ## Características Principales
 - Diseño Responsivo: El portfolio está diseñado para adaptarse a diferentes tamaños de pantalla, brindando una experiencia de usuario consistente en todos los dispositivos.

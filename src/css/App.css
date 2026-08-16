@@ -17,7 +17,7 @@ button { color: inherit; font: inherit; }
 .utility-links a:hover, .footer-links a:hover, .text-link:hover { color: #988f78; }
 .brand-row { min-height: 132px; border-bottom: 1px solid var(--line); position: relative; }
 .brand-mark { display: flex; align-items: flex-end; gap: 17px; }
-.brand-initials { font: 500 74px/.8 "Playfair Display", Georgia, serif; letter-spacing: -.11em; }
+.brand-initials { font: 500 60px/.8 "Playfair Display", Georgia, serif; letter-spacing: -.075em; }
 .brand-caption { font: 10px/1.35 "DM Mono", monospace; letter-spacing: .06em; margin-bottom: 2px; }
 .brand-statement { color: var(--muted); font: 12px/1.5 "Playfair Display", Georgia, serif; font-style: italic; margin: 0 auto 0 18%; }
 .edition-number { align-self: flex-start; margin: 16px 0 0 auto; color: var(--muted); font: 10px "DM Mono", monospace; }
@@ -144,7 +144,8 @@ button { color: inherit; font: inherit; }
   .utility-bar { font-size: 8px; }
   .utility-links { gap: 12px; }
   .brand-row { min-height: 107px; }
-  .brand-initials { font-size: 57px; }
+  .brand-mark { gap: 10px; }
+  .brand-initials { font-size: 42px; }
   .brand-caption { font-size: 8px; }
   .brand-statement { display: none; }
   .edition-number { margin-top: 12px; font-size: 8px; }

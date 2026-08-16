@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="header position-fixed">
       <div className="header-content position-fixed top-50 start-0 translate-middle-y p-5">
-        <h1 className="titleDGG text-white">DGG</h1>
+        <h1 className="titleGlezWorks text-white">GlezWorks</h1>
         <div className="container">
           <div className="row pt-3">
             <div className="col text-center mb-3">
