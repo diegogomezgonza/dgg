@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Slider from "react-slick";
  // Al importar img, uso LazyLoading, de forma que las imágenes no se muestran cuando se carga la página, sino cuando han cargado por completo.
 import { Img } from "react-image";

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Img } from "react-image";
 import RingLoader from "react-spinners/ClipLoader";
 import "./css/MobileDraws.css";
