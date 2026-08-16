@@ -1,65 +1,64 @@
 /* eslint-disable react/prop-types */
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { BrowserRouter, NavLink, Route, Routes, useLocation } from "react-router-dom";
 import "./css/App.css";
 
 const collections = [
   {
-    slug: "draws",
-    label: "DC / CHARACTERS",
-    title: "DC Characters",
-    description: "Retratos, estudios y versiones personales de algunos de los personajes que más han acompañado el archivo de GlezWorks.",
-    image: "/pics/harley.webp",
-    year: "2024—25",
+    slug: "manga",
+    label: "MANGA",
+    title: "MANGA",
+    image: "/pics/Guts Berserker.jpg",
+    year: "2023—26",
     works: [
-      { title: "Harley Quinn", tag: "PORTRAIT / 01", image: "/pics/harley.webp", tone: "warm" },
-      { title: "Catwoman", tag: "PORTRAIT / 02", image: "/pics/catwoman.webp", tone: "cool" },
-      { title: "Poison Ivy", tag: "PORTRAIT / 03", image: "/pics/poisonivy.webp", tone: "green" },
-      { title: "Batman", tag: "PORTRAIT / 04", image: "/pics/batman.webp", tone: "dark" },
-      { title: "Robin", tag: "PORTRAIT / 05", image: "/pics/robin.webp", tone: "red" },
-      { title: "Nightwing", tag: "PORTRAIT / 06", image: "/pics/nightwing.webp", tone: "blue" },
+      { id: "guts-new", title: "Guts", image: "/pics/Guts Berserker.jpg" },
+      { id: "guts-armor", title: "Guts", image: "/pics/berserk/gutsBerserkArmor.webp" },
+      { id: "misa", title: "Misa", image: "/pics/Misa.jpg" },
+      { id: "majin-vegeta", title: "Majin Vegeta", image: "/pics/Majin Vegeta.jpg" },
+      { id: "roronoa-zoro", title: "Roronoa Zoro", image: "/pics/Roronoa Zoro.jpg" },
+      { id: "zoro", title: "Zoro", image: "/pics/Zoro.jpg" },
+      { id: "thorkell", title: "Thorkell", image: "/pics/Thorkell.jpg" },
+      { id: "vasto-lorde", title: "Vasto Lorde", image: "/pics/Vasto Lorde.jpg" },
+      { id: "luffy", title: "Monkey D. Luffy", image: "/pics/onepiece/luffy.webp" },
+      { id: "zoro-study", title: "Roronoa Zoro", image: "/pics/onepiece/zoro.webp" },
     ],
   },
   {
-    slug: "onepiece",
-    label: "ONE PIECE",
-    title: "One Piece",
-    description: "Dos estudios de línea sobre movimiento, gesto y energía de la tripulación más reconocible del Grand Line.",
-    image: "/pics/onepiece/luffy.webp",
-    year: "2023",
+    slug: "videojuegos",
+    label: "VIDEOJUEGOS",
+    title: "VIDEOJUEGOS",
+    image: "/pics/Kratos.jpg",
+    year: "2023—26",
     works: [
-      { title: "Monkey D. Luffy", tag: "STUDY / 01", image: "/pics/onepiece/luffy.webp", tone: "red" },
-      { title: "Roronoa Zoro", tag: "STUDY / 02", image: "/pics/onepiece/zoro.webp", tone: "green" },
+      { id: "bayle", title: "Bayle the Dread", image: "/pics/Bayle the dread_.jpg" },
+      { id: "joel", title: "Joel", image: "/pics/Joel_ The last of us.jpg" },
+      { id: "kratos", title: "Kratos", image: "/pics/Kratos.jpg" },
+      { id: "messmer", title: "Messmer", image: "/pics/eldenring/messmer.webp" },
     ],
   },
   {
-    slug: "berserk",
-    label: "BERSERK",
-    title: "Berserk",
-    description: "Una pieza única dedicada a la densidad del trazo, la armadura y la tensión dramática del universo de Miura.",
-    image: "/pics/berserk/gutsBerserkArmor.webp",
-    year: "2023",
+    slug: "superheroes",
+    label: "SUPERHEROES",
+    title: "SUPERHEROES",
+    image: "/pics/Spider-Man vs Venom.jpg",
+    year: "2023—26",
     works: [
-      { title: "Guts / Berserker Armor", tag: "STUDY / 01", image: "/pics/berserk/gutsBerserkArmor.webp", tone: "dark" },
-    ],
-  },
-  {
-    slug: "eldenring",
-    label: "ELDEN RING",
-    title: "Elden Ring",
-    description: "Un estudio atmosférico sobre silueta, ornamento y luz dentro de las Tierras Intermedias.",
-    image: "/pics/eldenring/messmer.webp",
-    year: "2024",
-    works: [
-      { title: "Messmer the Impaler", tag: "STUDY / 01", image: "/pics/eldenring/messmer.webp", tone: "red" },
+      { id: "deadpool", title: "Deadpool", image: "/pics/Deadpool.jpg" },
+      { id: "spider-man-venom", title: "Spider-Man vs Venom", image: "/pics/Spider-Man vs Venom.jpg" },
+      { id: "harley-quinn", title: "Harley Quinn", image: "/pics/harley.webp" },
+      { id: "catwoman", title: "Catwoman", image: "/pics/catwoman.webp" },
+      { id: "poison-ivy", title: "Poison Ivy", image: "/pics/poisonivy.webp" },
+      { id: "batman", title: "Batman", image: "/pics/batman.webp" },
+      { id: "robin", title: "Robin", image: "/pics/robin.webp" },
+      { id: "nightwing", title: "Nightwing", image: "/pics/nightwing.webp" },
     ],
   },
 ];
 
 const featuredWorks = [
-  { eyebrow: "LATEST STUDY / 06", title: "Harley Quinn", collection: "DC Characters", image: "/pics/harley.webp", date: "06.2025", copy: "Una interpretación de color y gesto construida alrededor de una figura que no necesita pedir permiso." },
-  { eyebrow: "LATEST STUDY / 05", title: "Messmer", collection: "Elden Ring", image: "/pics/eldenring/messmer.webp", date: "04.2024", copy: "Texturas, escala y una paleta encendida para capturar la quietud antes del combate." },
-  { eyebrow: "LATEST STUDY / 04", title: "Guts", collection: "Berserk", image: "/pics/berserk/gutsBerserkArmor.webp", date: "11.2023", copy: "Una pieza de alto contraste sobre armadura, peso y la resistencia de seguir avanzando." },
+  { title: "Guts", collection: "MANGA", image: "/pics/Guts Berserker.jpg", date: "06.2025" },
+  { title: "Kratos", collection: "VIDEOJUEGOS", image: "/pics/Kratos.jpg", date: "04.2025" },
+  { title: "Spider-Man vs Venom", collection: "SUPERHEROES", image: "/pics/Spider-Man vs Venom.jpg", date: "11.2024" },
 ];
 
 function SiteHeader() {
@@ -86,7 +85,7 @@ function SiteHeader() {
 
       <nav className="main-nav" aria-label="Navegación principal">
         <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>INDEX</NavLink>
-        <NavLink to="/draws" className={isCollection ? "active" : ""}>COLLECTIONS</NavLink>
+        <NavLink to="/manga" className={isCollection ? "active" : ""}>COLLECTIONS</NavLink>
         <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>ABOUT ME</NavLink>
         <span className="nav-rule" />
         <span className="language-switch">ES / EN</span>
@@ -103,15 +102,6 @@ function SectionHeading({ kicker, title, action }) {
         <h2>{title}</h2>
       </div>
       {action}
-    </div>
-  );
-}
-
-function WorkImage({ work, priority = false }) {
-  return (
-    <div className={`work-image ${work.tone || ""}`}>
-      <img src={work.image} alt={work.title} loading={priority ? "eager" : "lazy"} />
-      <span className="image-index">{work.tag}</span>
     </div>
   );
 }
@@ -135,9 +125,8 @@ function HomePage() {
           </div>
         </div>
         <div className="hero-frame">
-          <img src="/pics/berserk/gutsBerserkArmor.webp" alt="Guts con la armadura Berserker" />
-          <div className="hero-label hero-label-top">FEATURED IMAGE / 01</div>
-          <div className="hero-label hero-label-bottom">GUTS — BERSERK<br /><span>ARMOR STUDY / 2023</span></div>
+          <img src="/pics/Guts Berserker.jpg" alt="Guts" />
+          <div className="hero-label hero-label-bottom">GUTS</div>
         </div>
       </section>
 
@@ -148,7 +137,7 @@ function HomePage() {
       </section>
 
       <section className="featured-section page-width">
-        <SectionHeading kicker="02 / SELECTED WORK" title="From the desk" action={<NavLink to="/draws" className="text-link">VIEW ALL COLLECTIONS <span>↗</span></NavLink>} />
+        <SectionHeading kicker="02 / SELECTED WORK" title="From the desk" action={<NavLink to="/manga" className="text-link">VIEW ALL COLLECTIONS <span>↗</span></NavLink>} />
         <div className="featured-layout">
           <div className="featured-visual">
             <img src={featured.image} alt={featured.title} key={featured.image} />
@@ -156,10 +145,8 @@ function HomePage() {
           </div>
           <div className="featured-info">
             <div className="feature-counter"><span>0{featuredIndex + 1}</span><span className="counter-line" /><span>0{featuredWorks.length}</span></div>
-            <span className="kicker">{featured.eyebrow}</span>
             <h3>{featured.title}</h3>
             <p className="feature-collection">{featured.collection}</p>
-            <p className="feature-copy">{featured.copy}</p>
             <div className="feature-footer"><span>{featured.date}</span><span>PERSONAL WORK</span></div>
             <div className="slider-controls">
               <button type="button" onClick={previousFeatured} aria-label="Obra anterior">←</button>
@@ -170,34 +157,34 @@ function HomePage() {
       </section>
 
       <section className="collections-section page-width">
-        <SectionHeading kicker="03 / THE ARCHIVE" title="Collections" action={<span className="section-count">04 SERIES</span>} />
+        <SectionHeading kicker="03 / THE ARCHIVE" title="Collections" action={<span className="section-count">03 SERIES</span>} />
         <div className="collection-list">
           {collections.map((collection, index) => (
             <NavLink to={`/${collection.slug}`} className="collection-row" key={collection.slug}>
               <span className="collection-number">0{index + 1}</span>
               <span className="collection-name">{collection.label}</span>
-              <span className="collection-description">{collection.description}</span>
               <span className="collection-arrow">↗</span>
             </NavLink>
           ))}
         </div>
       </section>
-
     </main>
   );
 }
 
+function WorkImage({ work, priority = false }) {
+  return <div className="work-image"><img src={work.image} alt={work.title} loading={priority ? "eager" : "lazy"} /></div>;
+}
+
 function CollectionPage({ collection }) {
-  const [filter, setFilter] = useState("ALL WORK");
-  const filters = ["ALL WORK", ...(collection.works.some((work) => work.tag.startsWith("PORTRAIT")) ? ["PORTRAITS"] : []), ...(collection.works.some((work) => work.tag.startsWith("STUDY")) ? ["STUDIES"] : [])];
-  const visibleWorks = useMemo(() => filter === "ALL WORK" ? collection.works : collection.works.filter((work) => work.tag.startsWith(filter === "PORTRAITS" ? "PORTRAIT" : "STUDY")), [collection, filter]);
+  const featuredWork = collection.works[0];
 
   return (
     <main className="collection-page page-width">
-      <div className="collection-intro"><div><span className="kicker">COLLECTION / {collection.year}</span><h1>{collection.title}</h1></div><p>{collection.description}</p></div>
-      <div className="collection-controls"><span>{String(collection.works.length).padStart(2, "0")} WORKS</span><div>{filters.map((item) => <button type="button" key={item} className={filter === item ? "selected" : ""} onClick={() => setFilter(item)}>{item}</button>)}</div></div>
-      <div className="collection-feature"><div className="collection-feature-image"><img src={collection.image} alt={collection.title} /></div><div className="collection-feature-copy"><span className="kicker">SERIES NOTE</span><p>Una colección de imágenes encontradas, redibujadas y vueltas a mirar hasta que algo nuevo aparece.</p><span className="vertical-caption">GLEZWORKS / {collection.label}</span></div></div>
-      <div className="work-grid">{visibleWorks.map((work, index) => <article className="work-card" key={work.title}><WorkImage work={work} priority={index < 2} /><div className="work-card-meta"><h2>{work.title}</h2><span>{work.tag}</span></div></article>)}</div>
+      <div className="collection-intro"><span className="kicker">COLLECTION / {collection.year}</span><h1>{collection.title}</h1></div>
+      <div className="collection-controls"><span>{String(collection.works.length).padStart(2, "0")} WORKS</span></div>
+      <div className="collection-feature"><div className="collection-feature-image"><img src={featuredWork.image} alt={featuredWork.title} /></div><div className="collection-feature-copy"><h2>{featuredWork.title}</h2></div></div>
+      <div className="work-grid">{collection.works.map((work, index) => <article className="work-card" key={work.id}><WorkImage work={work} priority={index < 2} /><div className="work-card-meta"><h2>{work.title}</h2></div></article>)}</div>
       <div className="collection-end"><span>END OF SERIES</span><NavLink to="/" className="text-link">BACK TO INDEX <span>↗</span></NavLink></div>
     </main>
   );
