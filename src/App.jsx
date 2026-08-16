@@ -70,7 +70,6 @@ function SiteHeader() {
     <header className="site-header">
       <div className="utility-bar">
         <span>GLEZWORKS / DRAWING ARCHIVE</span>
-        <span className="utility-center">EST. 2018 — MADRID</span>
         <div className="utility-links">
           <a href="https://www.instagram.com/dgg.draws/" target="_blank" rel="noreferrer">Instagram</a>
           <a href="https://www.artstation.com/dggdibujo" target="_blank" rel="noreferrer">ArtStation</a>
@@ -82,15 +81,13 @@ function SiteHeader() {
           <span className="brand-initials">GlezWorks</span>
           <span className="brand-caption">DIGITAL DRAWINGS<br />&amp; VISUAL NOTES</span>
         </NavLink>
-        <p className="brand-statement">A personal index of characters,<br />worlds and things worth drawing.</p>
         <span className="edition-number">NO. 07 / 26</span>
       </div>
 
       <nav className="main-nav" aria-label="Navegación principal">
         <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>INDEX</NavLink>
         <NavLink to="/draws" className={isCollection ? "active" : ""}>COLLECTIONS</NavLink>
-        <NavLink to="/journal" className={({ isActive }) => isActive ? "active" : ""}>JOURNAL</NavLink>
-        <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>ABOUT GLEZWORKS</NavLink>
+        <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>ABOUT ME</NavLink>
         <span className="nav-rule" />
         <span className="language-switch">ES / EN</span>
       </nav>
@@ -186,14 +183,6 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="notes-section page-width">
-        <SectionHeading kicker="04 / VISUAL NOTES" title="A few details" action={<NavLink to="/journal" className="text-link">READ THE JOURNAL <span>↗</span></NavLink>} />
-        <div className="notes-grid">
-          <article className="note-card note-card-large"><span className="note-label">NOTE / 001</span><h3>References are<br /><em>raw material.</em></h3><p>Every image starts somewhere else. The fun is in finding the turn it takes on the way here.</p><span className="note-date">18.06.2025</span></article>
-          <article className="note-card note-card-image"><img src="/pics/onepiece/zoro.webp" alt="Estudio de Roronoa Zoro" /><span className="note-label">STUDY / 008</span><span className="note-caption">Line, weight, silence.</span></article>
-          <article className="note-card note-card-dark"><span className="note-label">CURRENTLY</span><h3>Learning to<br /><em>leave space.</em></h3><span className="note-date">PROCESS NOTE / 2025</span></article>
-        </div>
-      </section>
     </main>
   );
 }
@@ -214,24 +203,11 @@ function CollectionPage({ collection }) {
   );
 }
 
-function JournalPage() {
-  return (
-    <main className="journal-page page-width">
-      <div className="page-intro"><span className="kicker">JOURNAL / SHORT NOTES</span><h1>Things I keep<br /><em>looking at.</em></h1><p>Pequeñas notas sobre referencias, procesos y las decisiones que se quedan fuera de una imagen terminada.</p></div>
-      <div className="journal-list">
-        <article><span>01 — 18.06.2025</span><h2>References are raw material.</h2><p>Una imagen no es un destino. Es la primera pista para empezar a mirar de otra forma.</p><a href="#top">READ NOTE ↗</a></article>
-        <article><span>02 — 04.05.2025</span><h2>Why characters stay.</h2><p>Volver a un personaje años después también es una forma de medir el tiempo.</p><a href="#top">READ NOTE ↗</a></article>
-        <article><span>03 — 21.11.2024</span><h2>Line before color.</h2><p>El color llega tarde. Primero hay que entender el peso, el ritmo y el silencio.</p><a href="#top">READ NOTE ↗</a></article>
-      </div>
-    </main>
-  );
-}
-
 function AboutPage() {
   return (
     <main className="about-page page-width">
-      <div className="page-intro"><span className="kicker">ABOUT / GLEZWORKS</span><h1>Personal work,<br /><em>kept in public.</em></h1></div>
-      <div className="about-grid"><p className="about-lead">GlezWorks es un archivo personal de dibujos digitales y notas visuales. Un lugar para reunir personajes, referencias y estudios que merecen una segunda mirada.</p><div className="about-facts"><div><span>BASED IN</span><strong>Madrid, ES</strong></div><div><span>FOCUS</span><strong>Characters<br />&amp; visual worlds</strong></div><div><span>CONTACT</span><a href="mailto:dgg.dibujo@gmail.com">dgg.dibujo@gmail.com ↗</a></div></div></div>
+      <div className="page-intro"><span className="kicker">ABOUT ME</span><h1>About<br /><em>the artist.</em></h1><p>I am a traditional and digital artist. This is my art portfolio, where I share my drawings. If you have any questions, <a className="email-link" href="mailto:diegodibujando@gmail.com">write to me at diegodibujando@gmail.com</a>.</p></div>
+      <div className="about-grid"><p className="about-lead">Traditional and digital drawings, collected in one place.</p><div className="about-facts"><div><span>ARTIST</span><strong>GlezWorks</strong></div><div><span>FOCUS</span><strong>Characters<br />&amp; visual worlds</strong></div><div><span>CONTACT</span><a href="mailto:diegodibujando@gmail.com">diegodibujando@gmail.com ↗</a></div></div></div>
       <div className="about-image"><img src="/pics/poisonivy.webp" alt="Poison Ivy, estudio de personaje" /><span>AN ARCHIVE IS NEVER FINISHED.</span></div>
     </main>
   );
@@ -242,7 +218,7 @@ function SiteFooter() {
 }
 
 function App() {
-  return <BrowserRouter><div className="App" id="top"><SiteHeader /><Routes><Route path="/" element={<HomePage />} />{collections.map((collection) => <Route key={collection.slug} path={`/${collection.slug}`} element={<CollectionPage collection={collection} />} />)}<Route path="/journal" element={<JournalPage />} /><Route path="/about" element={<AboutPage />} /></Routes><SiteFooter /></div></BrowserRouter>;
+  return <BrowserRouter><div className="App" id="top"><SiteHeader /><Routes><Route path="/" element={<HomePage />} />{collections.map((collection) => <Route key={collection.slug} path={`/${collection.slug}`} element={<CollectionPage collection={collection} />} />)}<Route path="/about" element={<AboutPage />} /></Routes><SiteFooter /></div></BrowserRouter>;
 }
 
 export default App;
