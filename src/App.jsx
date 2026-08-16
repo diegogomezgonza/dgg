@@ -53,6 +53,19 @@ const collections = [
       { id: "nightwing", title: "Nightwing", image: "/pics/nightwing.webp" },
     ],
   },
+  {
+    slug: "original-art",
+    label: "ORIGINAL ART",
+    title: "ORIGINAL ART",
+    image: "/pics/OC/celina.png",
+    year: "2026",
+    works: [
+      { id: "celina", title: "Celina", image: "/pics/OC/celina.png" },
+      { id: "reaper", title: "Reaper", image: "/pics/OC/reaper.png" },
+      { id: "skate", title: "Skate", image: "/pics/OC/skate.png" },
+      { id: "sonne", title: "Sonne", image: "/pics/OC/sonne.png" },
+    ],
+  },
 ];
 
 const featuredWorks = [
@@ -162,7 +175,7 @@ function CollectionPage({ collection }) {
 function AboutPage() {
   return (
     <main className="about-page page-width">
-      <div className="page-intro"><h1>About<br /><em>the artist.</em></h1><p>I am a traditional and digital artist. This is my art portfolio, where I share my drawings. If you have any questions, <a className="email-link" href="mailto:diegodibujando@gmail.com"><strong>write to me at diegodibujando@gmail.com</strong></a>.</p></div>
+      <div className="page-intro"><h1>About<br /><em>the artist.</em></h1><p>I am a traditional and digital artist and developer. This is my art portfolio, where I share my drawings. If you have any questions, <a className="email-link" href="mailto:diegodibujando@gmail.com"><strong>write to me at diegodibujando@gmail.com</strong></a>.</p></div>
       <div className="about-image"><img src="/pics/poisonivy.webp" alt="Poison Ivy, estudio de personaje" /></div>
     </main>
   );
