@@ -42,8 +42,6 @@ button { color: inherit; font: inherit; }
 .featured-visual { height: 570px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #e8e7e0; }
 .featured-visual img { width: 100%; height: 100%; display: block; object-fit: contain; object-position: center; animation: image-in .35s ease-out; }
 @keyframes image-in { from { opacity: .35; transform: scale(1.015); } to { opacity: 1; transform: scale(1); } }
-.featured-stamp { position: absolute; bottom: 23px; left: 24px; width: 55px; height: 55px; border: 1px solid rgba(255,255,255,.8); color: white; border-radius: 50%; display: grid; place-content: center; text-align: center; font: 12px/.9 "Playfair Display", serif; transform: rotate(-12deg); }
-.featured-stamp small { font: 7px "DM Mono", monospace; letter-spacing: .04em; }
 .featured-info { display: flex; flex-direction: column; padding: 36px 42px; background: #eeeee9; }
 .feature-counter { display: flex; align-items: center; gap: 10px; color: var(--muted); font: 10px "DM Mono", monospace; margin-bottom: auto; }
 .feature-counter span:first-child { color: var(--ink); }

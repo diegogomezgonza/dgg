@@ -83,8 +83,8 @@ function SiteHeader() {
   return (
     <header className="site-header">
       <div className="brand-row">
-        <NavLink to="/" className="brand-mark" aria-label="GlezWorks, volver al inicio">
-          <span className="brand-initials">GlezWorks</span>
+        <NavLink to="/" className="brand-mark" aria-label="diegogonzart, volver al inicio">
+          <span className="brand-initials">diegogonzart</span>
           <span className="brand-caption">Diego Gómez González</span>
         </NavLink>
       </div>
@@ -175,7 +175,6 @@ function HomePage() {
         <div className="featured-layout">
           <div className="featured-visual">
             <ProtectedImage src={featured.image} alt={featured.title} key={featured.image} />
-            <span className="featured-stamp">GW<br /><small>ARCHIVE</small></span>
           </div>
           <div className="featured-info">
             <div className="feature-counter"><span>0{featuredIndex + 1}</span><span className="counter-line" /><span>0{featuredWorks.length}</span></div>
@@ -226,7 +225,7 @@ function AboutPage() {
 }
 
 function SiteFooter() {
-  return <footer className="site-footer page-width"><div className="footer-mark">GlezWorks<span>© {new Date().getFullYear()}</span></div><div className="footer-links"><a href="https://www.instagram.com/glezworks/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://www.artstation.com/glezworks" target="_blank" rel="noreferrer">ArtStation ↗</a><a href="https://www.pinterest.es/dggDraws/_created" target="_blank" rel="noreferrer">Pinterest ↗</a><a href="https://github.com/diegogomezgonza" target="_blank" rel="noreferrer">GitHub ↗</a></div></footer>;
+  return <footer className="site-footer page-width"><div className="footer-mark">diegogonzart<span>© {new Date().getFullYear()}</span></div><div className="footer-links"><a href="https://www.instagram.com/glezworks/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://www.artstation.com/glezworks" target="_blank" rel="noreferrer">ArtStation ↗</a><a href="https://www.pinterest.es/dggDraws/_created" target="_blank" rel="noreferrer">Pinterest ↗</a><a href="https://github.com/diegogomezgonza" target="_blank" rel="noreferrer">GitHub ↗</a></div></footer>;
 }
 
 function App() {
