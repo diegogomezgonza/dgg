@@ -42,9 +42,10 @@ const collections = [
     slug: "superheroes",
     label: "SUPERHEROS",
     title: "SUPERHEROS",
-    image: "/pics/Spider-Man vs Venom.jpg",
+    image: "/pics/absoluteBatman.jpg",
     year: "2023—26",
     works: [
+      { id: "absolute-batman", title: "Absolute Batman", image: "/pics/absoluteBatman.jpg" },
       { id: "deadpool", title: "Deadpool", image: "/pics/Deadpool.jpg" },
       { id: "spider-man-venom", title: "Spider-Man vs Venom", image: "/pics/Spider-Man vs Venom.jpg" },
       { id: "harley-quinn", title: "Harley Quinn", image: "/pics/harley.webp" },
@@ -165,8 +166,8 @@ function HomePage() {
           <h1>Explore</h1>
         </div>
         <div className="hero-frame">
-          <ProtectedImage src="/pics/Zoro.jpg" alt="Zoro" />
-          <div className="hero-label hero-label-bottom">ZORO</div>
+          <ProtectedImage src="/pics/absoluteBatman.jpg" alt="Absolute Batman" />
+          <div className="hero-label hero-label-bottom">ABSOLUTE BATMAN</div>
         </div>
       </section>
 
