@@ -46,6 +46,7 @@ const collections = [
     year: "2023—26",
     works: [
       { id: "absolute-batman", title: "Absolute Batman", image: "/pics/absoluteBatman.jpg" },
+      { id: "bane-vs-batman-absolute", title: "Bane versus Batman (Absolute Universe)", image: "/pics/Bane versus Batman.jpg" },
       { id: "deadpool", title: "Deadpool", image: "/pics/Deadpool.jpg" },
       { id: "spider-man-venom", title: "Spider-Man vs Venom", image: "/pics/Spider-Man vs Venom.jpg" },
       { id: "harley-quinn", title: "Harley Quinn", image: "/pics/harley.webp" },
