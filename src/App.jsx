@@ -7,6 +7,17 @@ const LightboxContext = createContext(null);
 
 const collections = [
   {
+    slug: "nexus",
+    label: "NEXUS",
+    title: "NEXUS",
+    image: "/pics/nexus/cero-general.jpg",
+    year: "2026",
+    description: "Nexus is a universe created by me, drawing inspiration from Half-Life 2 and Metal Gear Solid.",
+    works: [
+      { id: "nexus-cero", title: "Cero", image: "/pics/nexus/cero-general.jpg", fit: "contain" },
+    ],
+  },
+  {
     slug: "manga",
     label: "MANGA",
     title: "MANGA",
@@ -71,17 +82,6 @@ const collections = [
       { id: "cero", title: "Cero", image: "/pics/nexus/cero-general.jpg", fit: "contain" },
     ],
   },
-  {
-    slug: "nexus",
-    label: "NEXUS",
-    title: "NEXUS",
-    image: "/pics/nexus/cero-general.jpg",
-    year: "2026",
-    description: "Nexus es un universo creado por mí, tomando como inspiración Half-Life 2 y Metal Gear Solid.",
-    works: [
-      { id: "nexus-cero", title: "Cero", image: "/pics/nexus/cero-general.jpg", fit: "contain" },
-    ],
-  },
 ];
 
 const featuredWorks = [
@@ -92,7 +92,7 @@ const featuredWorks = [
 
 function SiteHeader() {
   const location = useLocation();
-  const isCollection = collections.some((collection) => `/${collection.slug}` === location.pathname);
+  const isCollection = collections.some((collection) => collection.slug !== "nexus" && `/${collection.slug}` === location.pathname);
 
   return (
     <header className="site-header">
@@ -106,6 +106,7 @@ function SiteHeader() {
       <nav className="main-nav" aria-label="Navegación principal">
         <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>INDEX</NavLink>
         <NavLink to="/manga" className={isCollection ? "active" : ""}>COLLECTIONS</NavLink>
+        <NavLink to="/nexus" className={({ isActive }) => `nexus-tab ${isActive ? "active" : ""}`.trim()}>NEXUS</NavLink>
         <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>ABOUT ME</NavLink>
       </nav>
     </header>
@@ -178,9 +179,9 @@ function HomePage() {
         <div className="hero-copy">
           <h1>Explore</h1>
         </div>
-        <div className="hero-frame">
-          <ProtectedImage src="/pics/absoluteBatman.jpg" alt="Absolute Batman" />
-          <div className="hero-label hero-label-bottom">ABSOLUTE BATMAN</div>
+        <div className="hero-frame hero-frame-artwork">
+          <ProtectedImage src="/pics/nexus/cero-general.jpg" alt="Cero, concept art from Nexus" />
+          <div className="hero-label hero-label-bottom hero-label-dark">CERO · NEXUS</div>
         </div>
       </section>
 
@@ -219,7 +220,7 @@ function CollectionPage({ collection }) {
       <div className="collection-controls">
         <span>{String(collection.works.length).padStart(2, "0")} WORKS</span>
         <div className="collection-switcher" aria-label="Cambiar de colección">
-          {collections.map((item) => <NavLink to={`/${item.slug}`} className={({ isActive }) => isActive ? "active" : ""} key={item.slug}>{item.label}</NavLink>)}
+          {collections.map((item) => <NavLink to={`/${item.slug}`} className={({ isActive }) => `${item.slug === "nexus" ? "nexus-tab" : ""} ${isActive ? "active" : ""}`.trim()} key={item.slug}>{item.label}</NavLink>)}
         </div>
       </div>
       <div className="collection-feature"><div className={`collection-feature-image ${featuredWork.fit === "contain" ? "collection-feature-image-contain" : ""}`.trim()}><ProtectedImage src={featuredWork.image} alt={featuredWork.title} /></div><div className="collection-feature-copy"><h2>{featuredWork.title}</h2></div></div>
@@ -233,7 +234,7 @@ function AboutPage() {
   return (
     <main className="about-page page-width">
       <div className="page-intro"><h1>About<br /><em>the artist.</em></h1><p>I’m a traditional and digital artist, as well as a developer. This portfolio is a collection of my drawings and creative work. If you have any questions or would like to get in touch, feel free to email me at <a className="email-link" href="mailto:diegodibujando@gmail.com"><strong>diegodibujando@gmail.com</strong></a>.</p></div>
-      <div className="about-image"><ProtectedImage src="/pics/poisonivy.webp" alt="Poison Ivy, estudio de personaje" /></div>
+      <div className="about-image about-image-artwork"><ProtectedImage src="/pics/nexus/cero-general.jpg" alt="Cero, concept art from Nexus" /></div>
     </main>
   );
 }
