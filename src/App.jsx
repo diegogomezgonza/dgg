@@ -97,8 +97,9 @@ function SiteHeader() {
   return (
     <header className="site-header">
       <div className="brand-row">
-        <NavLink to="/" className="brand-mark" aria-label="Nexus, volver al inicio">
-          <img className="brand-logo" src="/pics/nexus/nexus-logo.png" alt="Nexus" draggable="false" />
+        <NavLink to="/" className="brand-mark" aria-label="diegogonzart, volver al inicio">
+          <span className="brand-initials">diegogonzart</span>
+          <span className="brand-caption">Diego Gómez González</span>
         </NavLink>
       </div>
 
@@ -239,7 +240,7 @@ function AboutPage() {
 }
 
 function SiteFooter() {
-  return <footer className="site-footer page-width"><div className="footer-mark"><img className="footer-logo" src="/pics/nexus/nexus-logo.png" alt="Nexus" draggable="false" /><span>© {new Date().getFullYear()}</span></div><div className="footer-links"><a href="https://www.instagram.com/glezworks/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://www.artstation.com/glezworks" target="_blank" rel="noreferrer">ArtStation ↗</a><a href="https://www.pinterest.es/dggDraws/_created" target="_blank" rel="noreferrer">Pinterest ↗</a><a href="https://github.com/diegogomezgonza" target="_blank" rel="noreferrer">GitHub ↗</a></div></footer>;
+  return <footer className="site-footer page-width"><div className="footer-mark">diegogonzart<span>© {new Date().getFullYear()}</span></div><div className="footer-links"><a href="https://www.instagram.com/glezworks/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://www.artstation.com/glezworks" target="_blank" rel="noreferrer">ArtStation ↗</a><a href="https://www.pinterest.es/dggDraws/_created" target="_blank" rel="noreferrer">Pinterest ↗</a><a href="https://github.com/diegogomezgonza" target="_blank" rel="noreferrer">GitHub ↗</a></div></footer>;
 }
 
 function App() {
