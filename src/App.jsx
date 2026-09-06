@@ -68,6 +68,18 @@ const collections = [
       { id: "reaper", title: "Reaper", image: "/pics/OC/reaper.png" },
       { id: "skate", title: "Skate", image: "/pics/OC/skate.png" },
       { id: "sonne", title: "Sonne", image: "/pics/OC/sonne.png" },
+      { id: "cero", title: "Cero", image: "/pics/nexus/cero-general.jpg", fit: "contain" },
+    ],
+  },
+  {
+    slug: "nexus",
+    label: "NEXUS",
+    title: "NEXUS",
+    image: "/pics/nexus/cero-general.jpg",
+    year: "2026",
+    description: "Nexus es un universo creado por mí, tomando como inspiración Half-Life 2 y Metal Gear Solid.",
+    works: [
+      { id: "nexus-cero", title: "Cero", image: "/pics/nexus/cero-general.jpg", fit: "contain" },
     ],
   },
 ];
@@ -195,7 +207,7 @@ function HomePage() {
 }
 
 function WorkImage({ work, priority = false }) {
-  return <div className="work-image"><ProtectedImage src={work.image} alt={work.title} loading={priority ? "eager" : "lazy"} /></div>;
+  return <div className={`work-image ${work.fit === "contain" ? "work-image-contain" : ""}`.trim()}><ProtectedImage src={work.image} alt={work.title} loading={priority ? "eager" : "lazy"} /></div>;
 }
 
 function CollectionPage({ collection }) {
@@ -203,14 +215,14 @@ function CollectionPage({ collection }) {
 
   return (
     <main className="collection-page page-width">
-      <div className="collection-intro"><span className="kicker">COLLECTION / {collection.year}</span><h1>{collection.title}</h1></div>
+      <div className="collection-intro"><div><span className="kicker">COLLECTION / {collection.year}</span><h1>{collection.title}</h1>{collection.description && <p className="collection-description">{collection.description}</p>}</div></div>
       <div className="collection-controls">
         <span>{String(collection.works.length).padStart(2, "0")} WORKS</span>
         <div className="collection-switcher" aria-label="Cambiar de colección">
           {collections.map((item) => <NavLink to={`/${item.slug}`} className={({ isActive }) => isActive ? "active" : ""} key={item.slug}>{item.label}</NavLink>)}
         </div>
       </div>
-      <div className="collection-feature"><div className="collection-feature-image"><ProtectedImage src={featuredWork.image} alt={featuredWork.title} /></div><div className="collection-feature-copy"><h2>{featuredWork.title}</h2></div></div>
+      <div className="collection-feature"><div className={`collection-feature-image ${featuredWork.fit === "contain" ? "collection-feature-image-contain" : ""}`.trim()}><ProtectedImage src={featuredWork.image} alt={featuredWork.title} /></div><div className="collection-feature-copy"><h2>{featuredWork.title}</h2></div></div>
       <div className="work-grid">{collection.works.map((work, index) => <article className="work-card" key={work.id}><WorkImage work={work} priority={index < 2} /><div className="work-card-meta"><h2>{work.title}</h2></div></article>)}</div>
       <div className="collection-end"><span>END OF SERIES</span><NavLink to="/" className="text-link">BACK TO INDEX <span>↗</span></NavLink></div>
     </main>

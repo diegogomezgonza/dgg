@@ -54,6 +54,7 @@ button { color: inherit; font: inherit; }
 .collection-page, .about-page { padding-bottom: 110px; }
 .collection-intro { min-height: 330px; display: grid; grid-template-columns: 1fr; align-items: end; padding: 76px 0 45px; border-bottom: 1px solid var(--line); }
 .collection-intro h1 { font: 500 clamp(44px, 6vw, 85px)/.95 "Playfair Display", serif; letter-spacing: -.06em; margin: 20px 0 0; }
+.collection-intro .collection-description { max-width: 620px; margin: 24px 0 0; color: var(--muted); font: 16px/1.6 "Playfair Display", serif; }
 .collection-controls { justify-content: space-between; min-height: 69px; color: var(--muted); font: 10px "DM Mono", monospace; letter-spacing: .06em; border-bottom: 1px solid var(--line); }
 .collection-switcher { display: flex; gap: 20px; }
 .collection-switcher a { color: var(--muted); padding-bottom: 3px; border-bottom: 1px solid transparent; }
@@ -61,12 +62,14 @@ button { color: inherit; font: inherit; }
 .collection-feature { display: grid; grid-template-columns: 75% 25%; min-height: 480px; margin: 60px 0 100px; background: #e6e5de; }
 .collection-feature-image { overflow: hidden; }
 .collection-feature-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 14%; display: block; }
+.collection-feature-image-contain img { object-fit: contain; object-position: center; }
 .collection-feature-copy { display: flex; flex-direction: column; justify-content: space-between; position: relative; padding: 34px 27px; border-left: 1px solid var(--line); }
 .collection-feature-copy h2 { font: 500 clamp(30px, 3vw, 48px)/.98 "Playfair Display", serif; letter-spacing: -.05em; margin: 0; }
 .vertical-caption { position: absolute; bottom: 28px; left: 27px; color: var(--muted); font: 9px "DM Mono", monospace; letter-spacing: .06em; writing-mode: vertical-rl; transform: rotate(180deg); }
 .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px 18px; }
 .work-image { position: relative; height: 510px; overflow: hidden; background: #dad8cd; }
 .work-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 14%; display: block; transition: transform .45s; }
+.work-image-contain img { object-fit: contain; object-position: center; }
 .work-card:hover .work-image img { transform: scale(1.025); }
 .work-card-meta { display: flex; justify-content: space-between; align-items: baseline; padding-top: 15px; border-top: 1px solid var(--line); margin-top: 12px; }
 .work-card-meta h2 { font: 500 20px "Playfair Display", serif; margin: 0; }
@@ -119,6 +122,7 @@ button { color: inherit; font: inherit; }
   .collection-intro, .page-intro { display: block; padding: 75px 0 42px; }
   .collection-intro h1 { font-size: 58px; margin-bottom: 32px; }
   .collection-intro p, .page-intro p { margin: 0; max-width: 320px; }
+  .collection-intro .collection-description { margin-top: 20px; max-width: 520px; font-size: 15px; }
   .collection-controls { display: flex; padding: 18px 0; }
   .collection-switcher { gap: 16px; max-width: 100%; min-width: 0; overflow-x: auto; white-space: nowrap; }
   .collection-feature { display: block; min-height: 0; margin: 35px 0 75px; }
