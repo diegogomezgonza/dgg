@@ -15,6 +15,10 @@ const collections = [
     description: "Nexus is a universe created by me, drawing inspiration from Half-Life 2 and Metal Gear Solid.",
     works: [
       { id: "nexus-cero", title: "Cero", image: "/pics/nexus/cero-general.jpg", fit: "contain" },
+      { id: "nexus-grim", title: "Grim", image: "/pics/nexus/grim.jpg", fit: "contain" },
+      { id: "nexus-hugo", title: "Hugo", image: "/pics/nexus/hugo.jpg", fit: "contain" },
+      { id: "nexus-hugo-body", title: "Hugo · Character design", image: "/pics/nexus/hugo-body.jpg", fit: "contain" },
+      { id: "nexus-hugo-portrait", title: "Hugo · Portrait", image: "/pics/nexus/hugo-head-sign.jpg", fit: "contain" },
     ],
   },
   {
@@ -80,6 +84,10 @@ const collections = [
       { id: "skate", title: "Skate", image: "/pics/OC/skate.png" },
       { id: "sonne", title: "Sonne", image: "/pics/OC/sonne.png" },
       { id: "cero", title: "Cero", image: "/pics/nexus/cero-general.jpg", fit: "contain" },
+      { id: "grim", title: "Grim", image: "/pics/nexus/grim.jpg", fit: "contain" },
+      { id: "hugo", title: "Hugo", image: "/pics/nexus/hugo.jpg", fit: "contain" },
+      { id: "hugo-body", title: "Hugo · Character design", image: "/pics/nexus/hugo-body.jpg", fit: "contain" },
+      { id: "hugo-portrait", title: "Hugo · Portrait", image: "/pics/nexus/hugo-head-sign.jpg", fit: "contain" },
     ],
   },
 ];
